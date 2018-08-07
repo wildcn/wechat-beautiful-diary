@@ -1,0 +1,7 @@
+/* pages/calendar/index.wxss */
+@import "./../../public/wxss/home.wxss";
+@import "./../../public/wxss/hot.wxss";
+@import "./../../public/wxss/column.wxss";
+@import "./../../public/wxss/as/weathericon.wxss";
+@import "./../../public/wxss/as/weather-date.wxss";
+@import "./../../public/wxss/as/version-tips.wxss";

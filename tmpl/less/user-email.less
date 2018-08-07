@@ -1,0 +1,287 @@
+@import 'fontsize';
+@import 'init';
+page {
+    background: #fbfbfb;
+}
+
+.user-email {
+    position: relative;
+    z-index: 1;
+    .ue-head {
+        background: rgba(255, 255, 255, 0.2);
+        height: 60rpx;
+        padding: 30rpx;
+        margin-bottom: 30rpx;
+        image {
+            width: 60rpx;
+            height: 60rpx;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .ue-nickname {
+            line-height: 60rpx;
+            margin-right: 20rpx;
+            .font4;
+        }
+        .ue-headtitle {
+            display: inline-block;
+            line-height: 60rpx;
+            .font2;
+        }
+    }
+}
+
+.ue-main {
+    .ue-ul {
+        margin-bottom: 30rpx;
+        box-sizing: border-box;
+        // padding: 30rpx 0 0 0;
+        .font4;
+    }
+    .ue-navlist {
+        overflow: hidden;
+        height: 80rpx;
+        line-heig ht: 80rpx;
+        position: fixed;
+        top: 0;
+        background: #fbfbfb;
+        left: 0;
+        width: 100vw;
+        z-index: 13;
+        .ue-type {
+            text-align: center;
+            color: #555;
+            padding-bottom: 20rpx;
+            border-bottom: 1rpx solid #eee;
+            &.active {
+                .bgc1;
+                color: #fff;
+            }
+            .fr {
+                float: right;
+            }
+        }
+    }
+    .mengban {
+        height: 80rpx;
+        overflow: hidden;
+    }
+    .ue-li {
+        // margin-bottom: 20rpx;
+        border-bottom: 1rpx solid #eee;
+        padding: 0 20rpx 20rpx 20rpx;
+        &:last-child {
+            // border-bottom: 0;
+            margin-bottom: 0;
+        }
+        padding:20rpx 30rpx;
+        &.active {
+            background: #fff;
+            padding: 30rpx;
+            .ue-title {
+                .colour1;
+            }
+            .ue-content {
+                padding: 10rpx;
+                line-height: 1.6em;
+            }
+        }
+    }
+    .ue-title {
+        color: lighten(@color1, 10%);
+        display: block;
+        margin-bottom: 10rpx;
+        padding-right: 30rpx;
+        position: relative;
+        line-height: 1.2em;
+    }
+    .ue-time {
+        color: #666;
+        .font6;
+    }
+    .ue-content {
+        // margin-top: 20rpx;
+    }
+    .ue-fr {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .ue-p {
+        display: block;
+        margin-bottom: 20rpx;
+        line-height: 1.4em;
+        word-wrap: break-word;
+    }
+    .new,
+    .old {
+        .ue-flag {
+            .font6;
+            padding: 0rpx 7rpx;
+            background: @color1;
+            color: #fff;
+            margin-right: 10rpx;
+        }
+    }
+    .old {
+        .ue-title {
+            color: #555;
+        }
+        .ue-flag {
+            background: #ddd;
+        }
+    }
+}
+
+.ue-public-num {}
+
+// 私信
+.ue-private {
+    .ue-li {
+        margin-bottom: 0;
+        padding: 14rpx 0;
+        // border: 0;
+        position: relative;
+        z-index: 2;
+        margin: 0 20rpx;
+        &:last-child {
+            .ue-p-time {
+                border: 0 !important;
+            }
+        }
+        &.send {
+            // text-align: right;
+        }
+    }
+    .ue-p-name {
+        color: #606060;
+        height: 40rpx;
+        line-height: 40rpx;
+    }
+    .ue-p-time {
+        color: #b8b8b8;
+        height: 40rpx;
+        line-height: 40rpx;
+        margin: 0 20rpx;
+        border-bottom: 1rpx solid #eee;
+    }
+    .ue-p-shortContent {
+        height: 30rpx;
+        line-height: 30rpx;
+        color: #b7b7b7;
+    }
+    .ue-content {
+        margin-top: 0;
+        position: relative;
+        // padding: 10rpx 20rpx 10rpx 20rpx;
+        .ue-p {
+            margin-bottom: 10rpx;
+            // &:last-child {
+            //     margin-bottom: 0;
+            // }
+        }
+    }
+    .ue-list {
+        box-sizing: border-box;
+        height: 80rpx;
+        // padding: 0 20rpx;
+        .ue-p-icon {
+            margin-right: 10rpx;
+            position: relative;
+            .ue-p-num {
+                position: absolute;
+                width: 30rpx;
+                height: 0rpx;
+                text-align: center;
+                line-height: 0rpx;
+                padding: 15rpx 0px;
+                right: 0;
+                top: 0;
+                color: #fff;
+                border-radius: 50%;
+            }
+        }
+        image {
+            width: 80rpx;
+            height: 80rpx;
+            border-radius: 50%;
+        }
+    }
+}
+
+.ue-comments {
+    .ue-content {
+        margin-top: 10rpx;
+    }
+}
+
+// 私信详情页
+.user-chat {
+    .ue-chat-btn {
+        display: block;
+        margin: 30rpx;
+        box-sizing: border-box;
+        left: 50%;
+        transform:translateX(-50%);
+        width: 400rpx;
+    }
+    .ue-layout{
+        height: 1000rpx;
+    }
+    background: #ebebeb;
+    min-height: 100vh;
+    .ue-list {
+        display: block;
+        vertical-align: top;
+        position: relative;
+        height: auto;
+    }
+    .ue-navlist {
+        background: #2b3721;
+        .ue-type {
+            color: #fff;
+        }
+    }
+    .ue-p-icon {
+        image {
+            width: 60rpx;
+            height: 60rpx;
+        }
+    }
+    .ue-p-content {
+        margin: 0 5rpx;
+        padding: 13rpx 10rpx;
+        background: #fff;
+        border-radius: 10rpx;
+        .ue-p {
+            color: #111c24;
+            margin-bottom: 0 !important;
+        }
+    }
+    .ue-li {
+        border: 0;
+        image {
+            border-radius: 0;
+        }
+        &.send {
+            text-align: right;
+            .ue-p-icon {
+                margin-right: 0;
+                margin-left: 10rpx;
+            }
+        }
+        &.receive {
+            .ue-p-content {
+                background: #a2e759;
+                .ue-p {
+                    color: #111c24;
+                }
+            }
+        }
+        .ue-p-time {
+            color: #999;
+            margin: 10rpx 0 0 0;
+            border: 0;
+        }
+    }
+}

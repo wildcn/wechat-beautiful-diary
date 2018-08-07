@@ -1,0 +1,159 @@
+@import 'as/animate';
+@import 'init';
+
+.godball {
+    position: fixed;
+    z-index: 9999;
+    width: 100vw;
+    transition: right 0.3s;
+    height: 100rpx;
+    overflow: hidden;
+    .gb-icon {
+        border-radius: 50%;
+        text-align: center;
+        position: relative;
+        right: 0;
+        z-index: 1;
+        width: 80rpx;
+        margin: 10rpx;
+        height: 80rpx;
+        line-height: 80rpx;
+        color: #fff;
+        outline: none;
+
+    }
+    .gb-icon:after {
+        pointer-events: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        content: '';
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+        outline: none;
+    }
+    .gb-icon:before {
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        display: block;
+        -webkit-font-smoothing: antialiased;
+    }
+    .gb-icon {
+        background: @f6;
+        transition: background 0.6s, color 0.6s;
+        position: relative;
+        color: @b6;
+        &:after {
+            top: -6rpx;
+            left: -6rpx;
+            padding: 6rpx;
+            box-shadow: 0 0 0 4rpx @f6;
+            transition: transform 0.2s, opacity 0.2s;
+            transform: scale(0.8);
+            opacity: 0;
+        }
+        .iconfont{
+        	color: @b6;
+        	animation: flip 3s infinite ease-in-out;
+        }
+
+    }
+    .gb-message {
+        position: relative;
+        .gb-content {
+            opacity: 0;
+            vertical-align: top;
+            background: @b8;
+            width: 0rpx;
+            position: absolute;
+            height: 80rpx;
+            top: 10rpx;
+            border: 1rpx solid @f6;
+            // right: 100rpx;
+            right: 40rpx;
+            border-radius: 40rpx;
+            transition: width 0.2s, opacity 0.2s;
+            text-align: center;
+            line-height: 80rpx;
+            color: #fff;
+            // 用户头像
+            image {
+                vertical-align: top;
+                display: inline-block;
+                width: 60rpx;
+                margin-top: 10rpx;
+                height: 60rpx;
+                border-radius: 50%;
+                margin-right: 10rpx;
+            }
+            view {
+                vertical-align: top;
+            }
+            &:after {
+                display: none;
+                content: '';
+                position: absolute;
+                right: -80rpx;
+                top: 0;
+                width: 0px;
+                height: 0;
+                border-top: 40rpx solid transparent;
+                border-right: 40rpx solid transparent;
+                border-bottom: 40rpx solid transparent;
+                border-left: 40rpx solid @b8;
+                opacity: 0;
+                transition: opacity 0.2s;
+            }
+        }
+        .gb-circle {
+            height: 70rpx;
+            width: 70rpx;
+            margin: 15rpx;
+            background: radial-gradient(140rpx at right top, transparent 50%, @f6 50%);
+            transform: rotate(45deg);
+            position: absolute;
+            right: -100rpx;
+            top: 0;
+            opacity: 0;
+            transition: opacity 0.5s, right 0.5s;
+            border-radius: 15rpx;
+        }
+    }
+    &.gb-active {
+        right: -20rpx!important;
+        .gb-message {
+            .gb-content {
+                opacity: 1;
+                width: 600rpx;
+                transition-delay: 0.3s;
+                &:after {
+                    opacity: 1;
+                }
+            }
+            .gb-circle {
+                opacity: 1;
+                right: -56rpx;
+                transition-delay: 0.1s;
+                background: radial-gradient(140rpx at right top, transparent 50%, @b6 50%);
+            }
+        }
+        .gb-icon {
+            background: @b4;
+            color: rgba(255, 255, 255, 0.8);
+            &:after {
+                box-shadow: 0 0 0 4rpx @b4;
+                transform: scale(1);
+                opacity: 1;
+            }
+            .iconfont{
+            	color: #fff;
+            	animation: none;
+            }
+        }
+    }
+}

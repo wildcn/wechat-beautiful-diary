@@ -1,0 +1,36 @@
+<import src="/template/module/list.wxml"/>
+<view class="user-email">
+	<!-- <view class="ue-head flex">
+		<view class="flex1 iconfont icon_email ue-headtitle" >美日信箱</view>
+		<view class="ue-nickname">{{curData.userRawData.nickName}}</view>
+		<image class="" src="{{curData.userRawData.avatarUrl}}" mode="widthFix" />
+	</view> -->
+	<view class="ue-main">
+		<view class="ue-navlist flex">
+			<view catchtap="emailBarClick" data-type="public" class="ue-type flex1 iconfont icon_vote font4 {{column.userEmail.publicMessage.show?'active':''}}">广场消息<view class="dib ue-public-num font6">({{column.userEmail.publicMessage.num}})</view>
+			</view>
+			<view catchtap="emailBarClick" data-type="private" class="ue-type flex1 iconfont icon_private font4 {{column.userEmail.privateMessage.show?'active':''}}" >私信<view class="dib ue-public-num font6">({{column.userEmail.privateMessage.num}})</view>
+			</view>
+			<view catchtap="emailBarClick" data-type="comments" class="ue-type flex1 iconfont icon_comments font4 {{column.userEmail.commentsMessage.show?'active':''}}" >我的评论<view class="dib ue-public-num font6">({{column.userEmail.commentsMessage.num}})</view>
+			</view>	
+		</view>
+		<view class="mengban h80"></view>
+		<view class="ue-layout">
+			<view class="ue-ul ue-public"  wx:if="{{column.userEmail.publicMessage.show}}" >
+				<template is="userEmailList" data="{{...column.userEmail.publicMessage}}" />
+			</view>
+			<view class="ue-ul ue-private" wx:if="{{column.userEmail.privateMessage.show}}" >
+			<view class="font6 message-tips iconfont icon_bbs">只保留一个月以内的私信</view>
+				<template is="userPrivateList"  data="{{...column.userEmail.privateMessage}}" />
+			</view>
+			<view class="ue-ul ue-comments" wx:if="{{column.userEmail.commentsMessage.show}}">
+				<view class="font6 message-tips iconfont icon_bbs">更多他人评论，请移步心情广场！</view>
+				<template is="userCommentsList"   data="{{...column.userEmail.commentsMessage}}" />
+			</view>
+		</view>
+	</view>
+</view>
+<template is="tempInput" data="{{...module.tempInput}}"></template>
+<!-- wetoast -->
+<import src="/template/as/tools.wxml"/>
+<template is="wetoast" data="{{...__wetoast__}}"/>

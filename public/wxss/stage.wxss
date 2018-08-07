@@ -1,0 +1,7 @@
+.stage{
+    background-image: url(/images/stage.jpg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    height: 700rpx;
+}
+.stage-content{}

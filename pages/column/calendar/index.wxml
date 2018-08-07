@@ -1,0 +1,45 @@
+<import src="/template/as/tools.wxml" />
+<!--日历-->
+ <view class="vbox-calendar boc3">
+    <view class="vbox-head font3 boc3 pb10 flex">
+        <view class="vbox-title colour3">
+        
+        <template is="selectDate" data="{{...today}}"></template>
+       <!--  <text class="fwb">菜单</text>
+        <text class="{{moodSwitch}} font4 color1 vbox-btn" bindtap="btnCalendar" data-type="mood">心情</text>
+        <text class="{{diarySwitch}} font4 color1 vbox-btn" bindtap="btnCalendar" data-type="diary">日记</text>
+        <text class="{{vacationSwitch}} font4 color1 vbox-btn" bindtap="btnCalendar" data-type="vacation">假期</text> -->
+        </view>
+        <text class="vbox-title colour1 flex1 tar" bindtap="goToToday">今天</text>
+    </view>
+    <view class="vbox-tr flex  font3">
+    <text class="flex1 tac colour2" wx:for="{{weekName}}" wx:key="weekName" class="{{item.class}} flex1 tac">{{item.name}}</text>
+    </view>
+    <view class="vbox-content bob">
+        <view class="vbox-tr flex por" wx:for="{{column.calendar.rowsDate}}" wx:key="calendar-a2" wx:for-item = "a2">
+        <view wx:for="{{a2.day}}" bindtap="dayClick"  wx:for-item = "a3"  wx:key="calendar" class="font4 everyday tac flex1 {{a3.className}}" data-date="{{a3.time}}">
+        <text class="ed-num">{{a3.name}}</text>
+        <view class="icon-area flex">
+        <view wx:for="{{a3.iconArr}}" wx:key="iconArr" wx:for-item="iconContent" class="icon_{{iconContent}} iconfont flex1"></view>
+        </view>
+        </view>
+    </view>
+    </view>
+    <view class="today-list">
+        
+        <view class="tl-item" wx:key="todaylist" wx:for="{{column.calendar.todayList}}">
+            <view class="tl-title flex">
+            <view class="iconfont icon_{{item.type}} bgc{{item.bgc}}"></view>
+                <view class="tl-name font4 flex1"> {{item.stitle}}</view>
+                <view class="iconfont icon_bottom"></view>
+            </view>
+            <view class="tl-content font6" wx:if="{{item.content}}">
+                {{item.content}}
+            </view>
+        </view>
+
+    </view>
+</view>
+<template is="entrance" data ="{{...module.render}}"></template>
+<import src="/template/module/bar.wxml"/>
+<!-- 底部功能栏 -->

@@ -1,0 +1,47 @@
+<import src="/template/module/bar.wxml"/>
+<import src="/template/module/godball.wxml"/>
+<template is="godBall" data="{{...module.render}}"></template>
+<!-- wetoast -->
+<import src="/template/as/tools.wxml"/>
+<!-- <template is="version-tips" data="{{...module.render.versionTips}}" /> -->
+
+
+
+<import src="/template/module/list.wxml"/>
+<import src="/template/as/weathericon.wxml"/>
+
+<template is="wetoast" data="{{...__wetoast__}}"/>
+<!-- 背景 -->
+	<view class="home">
+		<!-- 顶部功能栏 -->
+	<view class="main-info" style="background-image:url({{column.home.headImg}});">
+		<view class="area-bottom"></view>
+		<view class="mi-date">
+			<template wx:if="{{module.render.homeWeatherArea}}" is="weather-date" data="{{...curData}}"></template>
+		</view>
+		<view class="mi-world font3">
+			<text>{{column.home.headDesc }}</text>
+		</view>
+	</view>
+	<!-- 菜单栏 -->
+	<template is="iconNav" data="{{...module.iconNav}}"></template>
+	<template is="toadyDone" data="{{...module}}"></template>
+	<template is="entrance" data="{{...module.render}}"/>
+
+	<!-- 推荐模块 -->
+	<view class="common-hot" >
+		<view class="ch-title">
+			<text class="ch-name">每日一语</text>
+			<!-- <text class="ch-time">{{news.curData.time}}</text> -->
+			<view class="iconfont icon_bottom ch-go"></view>
+		</view>
+		<template is="news-image-txt" data="{{...column.home.newArt}}"></template>
+	</view>
+	
+	<!-- home end -->
+	</view>
+
+
+
+<!-- 底部功能栏 -->
+<!--  -->

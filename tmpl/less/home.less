@@ -1,0 +1,247 @@
+@import 'canvas';
+@import 'fontsize';
+@import 'layout';
+@import 'as/animate';
+.home {
+    // background: #fcfafb;
+    background: @homeBg;
+    min-height: 100%;
+    width: 100%;
+    padding-bottom: 100rpx;
+}
+
+page {
+    background: @homeBg;
+}
+
+// 顶部功能区域
+.main-info,
+.main-meau {
+    z-index: 100;
+}
+
+.main-info {
+    // .purple;
+    background-replace: no-repeat;
+    background-size: 100% auto;
+    // filter: blur(1rpx);
+    width: 100%;
+    height: 300rpx;
+    position: relative;
+    overflow: hidden;
+}
+
+.area-bottom {
+    position: absolute;
+    bottom: 5rpx;
+    left: 0;
+    height: 2rpx;
+    width: 100%;
+    background: #fff;
+    // background:#fb336f url(../../images/xiangyun.png) repeat-x;
+}
+
+.mi-world {
+    height: 50rpx;
+    padding: 0 50rpx;
+    width: 100%;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    bottom: 10rpx;
+    right: 0rpx;
+    color: #fff;
+    border-radius: 10rpx;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    // border-top: 1rpx solid rgba(255, 255, 255, 0.2);
+    text {
+        text-align: center;
+        height: 50rpx;
+        line-height: 50rpx;
+        display: block;
+        font-style: italic;
+    }
+}
+
+.mi-date .weather-date {
+    margin: 80rpx auto 0 auto;
+}
+
+.mi-year {
+    width: 300rpx;
+    height: 80rpx;
+    margin: 20rpx auto 0rpx auto;
+    border-radius: 3rpx;
+    line-height: 80rpx;
+    border-bottom: 2rpx solid @pink;
+    text-align: center;
+    color: #333;
+    display: block;
+    font-size: 50rpx;
+}
+
+.mi-badge {
+    width: 300rpx;
+    margin: 0rpx auto;
+    display: block;
+    box-sizing: border-box;
+    padding: 10rpx 30rpx;
+    height: 50rpx;
+    text {
+        line-height: 50rpx;
+    }
+    .mi-icon-title {
+        color: @pink;
+    }
+    .badge-num {
+        color: @pink;
+        margin: 0 20rpx 0 5rpx;
+    }
+    display: none;
+}
+
+.main-meau {
+    width: 100%;
+    height: 140rpx;
+    margin: 30rpx auto 0 auto;
+    // border-bottom: 1rpx dashed rgba(251, 51, 111, 0.5);
+    .mm-btn {
+        position: relative;
+    }
+    .mm-icon {
+        width: 60rpx;
+        height: 60rpx;
+        padding: 10rpx;
+        display: block;
+        margin: 0 auto;
+        font-size: 40rpx;
+        border-radius: 50%;
+        border: 1rpx solid rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.1);
+    }
+    .mm-name {
+        display: block;
+        margin-top: 10rpx;
+    }
+    .mm-new{
+        width: 14rpx;
+        height: 14rpx;
+        border-radius: 50%;
+        position: absolute;
+        right: 30rpx;
+        top: 5rpx;
+        background: #f00; 
+    }
+    .mm-number{
+        width: 30rpx;
+        height: 0;
+        border-radius: 50%;
+        position: absolute;
+        right: 20rpx;
+        top: 0rpx;
+        background: #f00; 
+        color: #fff;
+        .font6;
+        text-align: center;
+        line-height: 0;
+        padding: 15rpx 0px;
+    }
+}
+
+// 首页快捷区域
+.main-vermeau {
+    margin: 30rpx;
+    // border: 1rpx solid #eee;
+    background: url(http://p8.qhimg.com/t01e8d6f718683c9423.png) no-repeat top center;
+    background-size: auto 80rpx;
+    padding: 80rpx 0 20rpx 0;
+    .main-content {
+        border: 1rpx solid #eee;
+        border-radius: 10rpx;
+    }
+}
+
+.mv-item {
+    position: relative;
+    background: #fff;
+    height: 70rpx;
+    border-bottom: 1rpx solid #eee;
+    display: block;
+    padding: 10rpx 20rpx;
+    &:first-child {
+        border-radius: 10rpx;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    &:last-child {
+        border-bottom: 0;
+        border-radius: 10rpx;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+}
+.mv-nav{
+    position: absolute;
+    top: 10rpx;
+    right: -310rpx;
+    .mv-nav-item{
+        width: 100rpx;
+        height: 100%;
+        color: #fff;
+        text-align: center;
+        font-size: 30rpx;
+        height: 70rpx;
+        line-height: 70rpx;
+        margin-right: 1rpx;
+        display: inline-block;
+
+    }
+    .mv-nav-public{
+        width: 200rpx;
+    }
+}
+.mv-title {
+    .flex;
+    position: relative;
+    height: 100%;
+}
+
+.mv-name {
+    .font4;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 500rpx;
+    white-space: nowrap;
+}
+
+.mv-desc {
+    .font8;
+    color: #555;
+    position: absolute;
+    left: 0;
+    top: 2em;
+}
+
+.mv-icon {
+    width: 45rpx;
+    height: 45rpx;
+    padding: 10rpx;
+    border-radius: 10rpx;
+    color: #fff;
+    float: left;
+    font-size: 30rpx;
+    text-align: center;
+    line-height: 45rpx;
+    margin-right: 20rpx;
+}
+
+.mv-right {
+    position: absolute;
+    right: 10rpx;
+    top: 25rpx;
+}

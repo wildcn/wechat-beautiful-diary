@@ -1,0 +1,275 @@
+.font1 {
+  font-size: 40rpx!important;
+}
+.font2 {
+  font-size: 36rpx!important;
+}
+.font3 {
+  font-size: 32rpx!important;
+}
+.font4 {
+  font-size: 28rpx!important;
+}
+.font5 {
+  font-size: 26rpx!important;
+}
+.font6 {
+  font-size: 24rpx!important;
+}
+.font7 {
+  font-size: 22rpx!important;
+}
+.font8 {
+  font-size: 20rpx!important;
+}
+/*彩色*/
+.colour1 {
+  color: #118adc !important;
+}
+.colour2 {
+  color: #f12c52 !important;
+}
+.colour3 {
+  color: #00b389 !important;
+}
+.colour4 {
+  color: #5c3e9c !important;
+}
+.colour5 {
+  color: #fb336f !important;
+}
+/*背景色*/
+.bgc1 {
+  background-color: #118adc !important;
+}
+.bgc2 {
+  background-color: #f12c52 !important;
+}
+.bgc3 {
+  background-color: #00b389 !important;
+}
+.bgc4 {
+  background-color: #5c3e9c !important;
+}
+.bgc5 {
+  background-color: #fb336f !important;
+}
+.bgc_eee {
+  background-color: #eee!important;
+}
+/*边框色*/
+.boc1 {
+  border-color: #118adc !important;
+}
+.boc2 {
+  border-color: #f12c52 !important;
+}
+.boc3 {
+  border-color: #00b389 !important;
+}
+.boc4 {
+  border-color: #5c3e9c !important;
+}
+.boc5 {
+  border-color: #fb336f !important;
+}
+/*纯色*/
+.color1 {
+  color: #000!important;
+}
+.color2 {
+  color: #333!important;
+}
+.color3 {
+  color: #999!important;
+}
+.color4 {
+  color: #eee!important;
+}
+.color5 {
+  color: #fff!important;
+}
+.purple {
+  background: #723882;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #723882 0%, #684168 33%, #a22a83 82%, #9f2385 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #723882 0%, #684168 33%, #a22a83 82%, #9f2385 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #723882 0%, #684168 33%, #a22a83 82%, #9f2385 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  /* IE6-9 fallback on horizontal gradient */
+}
+.pink {
+  background: linear-gradient(#fd97b6 0%, #fb336f 100%);
+}
+.yellow {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f78a80+0,f9a79e+21,f7d9d7+71,f9a79e+100 */
+  background: #f78a80;
+  /* Old browsers */
+  background: -moz-linear-gradient(45deg, #f78a80 0%, #f9a79e 21%, #f7d9d7 71%, #f9a79e 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, #f78a80 0%, #f9a79e 21%, #f7d9d7 71%, #f9a79e 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, #f78a80 0%, #f9a79e 21%, #f7d9d7 71%, #f9a79e 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.green {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2689a1+0,49a49f+23,4a8981+74,445877+100 */
+  background: #2689a1;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #2689a1 0%, #49a49f 23%, #4a8981 74%, #445877 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #2689a1 0%, #49a49f 23%, #4a8981 74%, #445877 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #2689a1 0%, #49a49f 23%, #4a8981 74%, #445877 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.center {
+  text-align: center!important;
+}
+.container {
+  height: 100%!important;
+  display: flex!important;
+  flex-direction: column!important;
+  align-items: center!important;
+  justify-content: space-between !important;
+  padding: 200rpx 0!important;
+  box-sizing: border-box !important;
+}
+.display_none {
+  display: none!important;
+}
+.display_block {
+  display: block!important;
+}
+.width_auto {
+  width: 100%!important;
+}
+.height_auto {
+  height: 100%!important;
+}
+.layout {
+  margin: 15rpx!important;
+}
+.flex-wrp {
+  height: 60px!important;
+  display: flex!important;
+  background-color: #FFFFFF!important;
+}
+.flex {
+  display: flex!important;
+}
+.flex1 {
+  flex: 1!important;
+}
+.flex-item {
+  width: 33.33%!important;
+  height: 60px!important;
+  color: #000!important;
+  padding-top: 8px!important;
+  text-align: center!important;
+  justify-content: center!important;
+  align-items: center!important;
+}
+.por {
+  position: relative!important;
+}
+.poa {
+  position: absolute!important;
+}
+.pof {
+  position: fixed!important;
+}
+.tal {
+  text-align: left!important;
+}
+.tar {
+  text-align: right!important;
+}
+.tac {
+  text-align: center!important;
+}
+.fwb {
+  font-weight: bold!important;
+}
+.fsi {
+  font-style: italic!important;
+}
+.p10 {
+  padding: 10rpx!important;
+}
+.pl10 {
+  padding-left: 10rpx!important;
+}
+.pr10 {
+  padding-right: 10rpx!important;
+}
+.pb10 {
+  padding-bottom: 10rpx!important;
+}
+.pb20 {
+  padding-bottom: 20rpx!important;
+}
+.pb30 {
+  padding-bottom: 30rpx!important;
+}
+.m10 {
+  margin: 10rpx!important;
+}
+.mv10 {
+  margin: 10rpx 0!important;
+}
+.ml10 {
+  margin-left: 10rpx!important;
+}
+.bob {
+  border-bottom: 1rpx solid #eee!important;
+}
+.bot {
+  border-top: 1rpx solid #eee!important;
+}
+.mt10 {
+  margin-top: 10rpx!important;
+}
+.dib {
+  display: inline-block !important;
+}
+.tdu {
+  text-decoration: underline;
+}
+.tdu:before,
+.tdu:after {
+  text-decoration: none;
+}
+.common-bg {
+  width: 100vw;
+  height: 100vh;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f78a80+0,f9a79e+21,f7d9d7+71,f9a79e+100 */
+  background: #f78a80;
+  /* Old browsers */
+  background: -moz-linear-gradient(45deg, #f78a80 0%, #f9a79e 21%, #f7d9d7 71%, #f9a79e 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, #f78a80 0%, #f9a79e 21%, #f7d9d7 71%, #f9a79e 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, #f78a80 0%, #f9a79e 21%, #f7d9d7 71%, #f9a79e 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  z-index: 0;
+}
+.pofb {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+}
+.message-tips {
+  padding: 0 30rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  background: #ffdbc0;
+  font-size: 24rpx!important;
+  color: #555;
+}
+.color-555 {
+  color: #555!important;
+}

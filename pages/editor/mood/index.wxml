@@ -1,0 +1,38 @@
+<!-- wetoast -->
+<import src="/template/as/tools.wxml"/>
+<template is="wetoast" data="{{...__wetoast__}}"/>
+  <view class="editor-mood common-bg editor-mood-bg purple">
+  <!-- 加载日期选择 -->
+
+  <template is="selectDate" data="{{...today}}"/>
+    <import src="/template/as/weathericon.wxml"/>
+    <view class="em-nav">
+        <view class="em-city">
+          北京
+        </view>
+        <view class="em-weather">
+            <template is="{{curData.weather.class}}"/>
+        </view>
+    </view>
+    <view class="em-tips">
+      今天你的心情如何？
+      <view class="iconfont icon_bottom"></view>
+    </view>
+<!--   <view class="em-layout" bindtap = "moodClick" data-select="{{editor.mood.curType}}" >
+    <view class="em-leaf" wx:for="{{basic.moodDefault}}" wx:key="moodDefault" data-type="{{item.iconClass}}" data-name="{{item.name}}">
+      <view class="em-icon iconfont icon_{{item.iconClass}}" data-name="{{item.name}}" data-type="{{item.iconClass}}"></view>
+    </view>
+  </view> -->
+  <view class="em-mood-select" bindtap = "moodClick" data-select="{{editor.mood.curType}}" >
+    <view class="em-item {{item.class}}" wx:for="{{editor.mood.basicData}}" wx:key="moodDefault" data-type="{{item.iconClass}}" data-name="{{item.name}}">
+      <view class="em-icon iconfont icon_{{item.iconClass}}" data-name="{{item.name}}" data-type="{{item.iconClass}}"></view>
+      <view class="em-name">{{item.name}}</view>
+    </view>
+  </view>
+  <view class="em-result">您选择了<text class="em-select-icon iconfont icon_{{editor.mood.curType}}"></text>{{editor.mood.curTypeName}}<view class="iconfont icon_top"></view>
+  </view>
+  <view class="em-save font3" bindtap="moodSave">记录一下</view>
+  </view>
+
+<import src="/template/module/bar.wxml"/>
+<!-- 底部功能栏 -->

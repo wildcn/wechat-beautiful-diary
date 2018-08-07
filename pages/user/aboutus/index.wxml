@@ -1,0 +1,37 @@
+<view class="about-us">
+	<view class="au-item">
+		<view class="au-title">关于美日美历</view>
+		<text class="au-text" wx:for="{{column.aboutUs.aboutUs}}" wx:key = "aboutuslist">{{item.content}}
+
+		</text>
+		<button size="mini" type="primary" class="au-button u-item  dib " bindtap="navigateTo" data-href="pages/editor/feedback/index">意见反馈</button>
+	</view>
+	
+	<view class="au-item">
+		<view class="au-title">
+			联系方式
+		</view>
+		<text class="au-text" wx:for="{{column.aboutUs.contact}}" wx:key="contactus">{{item.content}}
+
+		</text>
+	</view>
+	<view class="au-item">
+		<view class="au-title">当前版本</view>
+		<view class="au-text au-version">{{column.aboutUs.curVersion}}</view>
+	</view>
+	<view class="au-item">
+		<view class="au-title">更新记录</view>
+		<text class="au-text au-version" wx:for="{{column.aboutUs.updateList}}" wx:key="updateList">{{item.content}}
+
+		</text>
+	</view>
+</view>
+
+
+<import src="/template/module/bar.wxml"/>
+<!-- 底部功能栏 -->
+
+
+<!-- wetoast -->
+<import src="/template/as/tools.wxml"/>
+<template is="wetoast" data="{{...__wetoast__}}"/>

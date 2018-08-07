@@ -1,0 +1,8 @@
+<import src="/template/module/detail.wxml"/>
+<template is="newsDetail" data="{{...news.detail}}"></template>
+<import src="/template/module/bar.wxml"/>
+<!-- 底部功能栏 -->
+
+<!-- wetoast -->
+<import src="/template/as/tools.wxml"/>
+<template is="wetoast" data="{{...__wetoast__}}"/>

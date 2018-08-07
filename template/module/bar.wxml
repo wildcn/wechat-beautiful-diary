@@ -1,0 +1,123 @@
+<!-- wetoast.wxml -->
+<import src="../as/weathericon.wxml" />
+
+<template name="entrance">
+	<!-- 快捷入口 数据 render-->
+	<view class="main-vermeau font4" >
+		<view class="main-content">
+			<view class="mv-item" wx:if="{{!commonTodayMood}}"   data-href='pages/editor/mood/index' bindtap="navigateTo">
+			<view class="iconfont icon_smile mv-icon bgc1"></view>
+			<view class="mv-title">
+				<text class="mv-name">写心情</text>
+				<text class="mv-desc">获得专属心情卡片吧~</text>
+			</view>
+			<view class="iconfont icon_right mv-right"></view>
+		</view>
+		<view class="mv-item" data-href='pages/editor/diary/index' wx:if="{{!commonTodayDiary}}" bindtap="navigateTo">
+			<view class="iconfont icon_diary mv-icon bgc2"></view>
+			<view class="mv-title">
+				<text class="mv-name">写日记</text>
+				<text class="mv-desc">今天是否有一顿大餐呢？</text>
+			</view>
+			<view class="iconfont icon_right mv-right"></view>
+		</view>
+		<view class="mv-item"  data-href='pages/column/anniversary/index' bindtap="navigateTo">
+			<view class="iconfont icon_remember mv-icon bgc3"></view>
+			<view class="mv-title">
+				<text class="mv-name">留下纪念</text>
+				<text class="mv-desc">这是值得纪念的一天</text>
+			</view>
+			<view class="iconfont icon_right mv-right"></view>
+		</view>
+		</view>
+	</view>
+</template>
+
+<template name="iconNav">
+	<!-- 菜单栏 -->
+	<view class="main-meau flex">
+		<view class="flex1 mm-btn"  data-href='pages/column/discover/index' bindtap="navigateTo">
+			<!-- <text class="iconfont icon_discover mm-icon bgc1"></text> -->
+			<image class="mm-icon" src="../../images/icon/discover.png" />
+			<view class="mm-name font5 tac db">发现</view>
+			<view class="mm-new" wx:if="{{discover.hot}}"></view>
+		</view>
+		<view class="flex1 mm-btn"  data-href='/pages/column/diary/index' bindtap="switchTab">
+			<image class="mm-icon" src="../../images/icon/diary.png" />
+			<view class="mm-name font5 tac db">日记</view>
+			<view class="mm-new" wx:if="{{diary.hot}}"></view>
+		</view>
+		<view class="flex1 mm-btn" bindtap="switchTab" data-href='/pages/column/mood/index'>
+			<image class="mm-icon" src="../../images/icon/mood.png" />
+			<view class="mm-name font5 tac db">心情</view>
+			<view class="mm-new" wx:if="{{mood.hot}}"></view>
+		</view>
+		<view class="flex1 mm-btn" bindtap="navigateTo" data-href='pages/column/anniversary/index'>
+			<image class="mm-icon" src="../../images/icon/anniversary.png" />
+			<view class="mm-name font5 tac db">纪念日</view>
+			<view class="mm-new" wx:if="{{anniversary.hot}}"></view>
+		</view>
+		<view class="flex1 mm-btn"  data-href='/pages/column/calendar/index' bindtap="switchTab">
+			<image class="mm-icon" src="../../images/icon/calendar.png" />
+			<view class="mm-name font5 tac db">日历</view>
+			<view class="mm-new" wx:if="{{calendar.hot}}"></view>
+		</view>
+	</view>
+	<view class="main-meau flex">
+		
+		<view class="flex1 mm-btn"  data-href='pages/column/square/index' bindtap="navigateTo">
+			<image class="mm-icon" src="../../images/icon/square.png" />
+			<view class="mm-name font5 tac db">心情广场</view>
+			<view class="mm-new" wx:if="{{square.hot}}"></view>
+		</view>
+		
+		<view class="flex1 mm-btn"  bindtap="navigateTo" data-href='pages/column/history/index'>
+			<image class="mm-icon" src="../../images/icon/history.png" />
+			<view class="mm-name font5 tac db">今日历史</view>
+			<view class="mm-new" wx:if="{{history.hot}}"></view>
+		</view>
+		<view class="flex1 mm-btn"  bindtap="navigateTo" data-href='pages/user/email/index'>
+			<image class="mm-icon" src="../../images/icon/email.png" />
+			<view class="mm-name font5 tac db">消息</view>
+			<view class="mm-new" wx:if="{{email.hot}}"></view>
+			<view class="mm-number" wx:if="{{email.newNum}}">{{email.newNum}}</view>
+		</view>
+		<view class="flex1 mm-btn"  bindtap="navigateTo" data-href='pages/editor/feedback/index'>
+			<image class="mm-icon" src="../../images/icon/feedback.png" />
+			<view class="mm-name font5 tac db">反馈</view>
+			<view class="mm-new" wx:if="{{feedback.hot}}"></view>
+			<view class="mm-number" wx:if="{{feedback.newNum}}">{{feedback.newNum}}</view>
+		</view>
+		<view class="flex1 mm-btn" bindtap="navMore">
+			<image class="mm-icon" src="../../images/icon/more.png" />
+			<view class="mm-name font5 tac db">更多</view>
+		</view>
+	</view>
+</template>
+
+
+<template name="weather-date">
+	<view class="weather-date">
+		<view class="wd-icon">
+			<template is="{{weather.class}}" data=""></template>
+		</view>
+		<view class="wd-line"></view>
+		<view class="wd-temperature">{{weather.temperature}}°</view>
+		<view class="wd-location">
+			<view class="wd-local">{{location.name}}</view>
+			<view class="wd-time">{{date}}</view>
+		</view>
+		<image class="wd-usericon" src="{{userRawData.avatarUrl}}" />
+	</view>
+</template>
+
+<template name="loading">
+    <view class="loading" wx:if="{{loading}}">
+
+    	<view class="loader-content">
+    		<view class="heartbeat-loader"></view>
+        	<view class="loader-name font4">美日美历 加载中……</view>
+    	</view>
+        
+    </view>
+</template>

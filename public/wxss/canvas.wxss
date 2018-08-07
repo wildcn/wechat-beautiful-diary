@@ -1,0 +1,7 @@
+#canvas1 {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#723882+0,684168+33,a22a83+82,9f2385+100 */
+}
+#canvas2 {
+  display: none;
+  background: #000;
+}

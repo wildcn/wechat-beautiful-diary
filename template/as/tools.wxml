@@ -1,0 +1,67 @@
+<template name="selectDate">
+			<view class="ed-curtime">
+    <picker mode="date" value="{{select.date}}" start="1700-09-01" end="{{endDate || date}}" bindchange="bindDateChange">
+      <view class="picker font4">
+        {{select.date}}
+      </view>
+      <view class="iconfont icon_bottom ed-bottom"></view>
+    </picker>
+  </view>
+</template>
+
+
+<template name="wetoast">
+<view class="wetoast {{taostClass}}">
+  <view class="wetoast__mask"></view>
+  <view class="wetoast__bd {{position}} {{bgclass}}" animation="{{animationData}}">
+    <block wx:if="{{title}}">
+      <view class="wetoast__bd__title {{titleClassName || ''}}">{{title}}</view>
+    </block>
+  </view>
+</view>
+</template>
+
+<template name="radar">
+  <canvas canvas-id="radar" style="width:100vw;height:65vmin;"></canvas>
+</template>
+
+<template name="version-tips">
+  <view class="version-tips" wx:if="{{show}}">
+    <view class="iconfont icon_close" bindtap="closeVersionTips">关闭</view>
+    <swiper indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block>
+        <swiper-item  class="p1">
+          <view class="vt-content">
+            <image mode="widthFix" class="vt-heart-bg" src="http://p7.qhimg.com/t017b08a6aebe8b7839.jpg" />
+            <image mode="widthFix" class="vt-heart-bg1" src="http://p7.qhimg.com/t01e2158a9ee419d42c.jpg" />
+          </view>
+          <view class="vt-title font4">
+            这是一款能记录心情的小程序
+          </view>
+        </swiper-item>
+      </block>
+       <block>
+        <swiper-item  class="p1">
+          <view class="vt-content">
+            <image mode="widthFix" class="vt-heart-bg" src="http://p0.qhimg.com/t0115e2198c78ac0b44.jpg" />
+            <image mode="widthFix" class="vt-heart-bg1" src="http://p4.qhimg.com/t01831fc8b3a3c9d948.jpg" />
+          </view>
+          <view class="vt-title font4">
+            随手写日记，3秒留下纪念~
+          </view>
+        </swiper-item>
+      </block>
+        <block>
+        <swiper-item  class="p1">
+          <view class="vt-content">
+            <view class="heartbeat-loader"></view>
+          </view>
+          <view type="primary" class="vt-button vt-title font4" bindtap="closeVersionTips">
+            心随我意 美日美历
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+</template> 

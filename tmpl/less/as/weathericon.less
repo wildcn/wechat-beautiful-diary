@@ -1,0 +1,325 @@
+@import '../init';
+@cloud:#aaa; // 云
+@sun:#fff; // 云边
+@border:#fff; // 太阳
+@rays:#fff; // 光线
+// view {
+//     box-sizing: border-box;
+// }
+
+h1 {
+    margin-bottom: 1.375/2em;
+    color: #fff;
+    font-weight: 100;
+    font-size: 2/2em;
+    text-transform: uppercase;
+}
+
+p,
+a {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: small;
+}
+
+.wi {
+    font-size: 20rpx;
+}
+
+p {
+    margin: 1.375r/2em 0;
+}
+
+.weathericon {
+    border-radius: 10rpx;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    width: 12/2em;
+    height: 10/2em;
+    font-size: 1/2em;
+    // background: #000;
+    & view::before,
+    & view::after,
+    & view {
+        box-sizing: border-box;
+    }
+}
+
+.cloud {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 3.6875/2em;
+    height: 3.6875/2em;
+    margin: -1.84375/2em;
+    // background: currentColor;
+    background: @cloud;
+    border-radius: 50%;
+    box-shadow: -2.1875/2em 0.6875/2em 0 -0.6875/2em @cloud, 2.0625/2em 0.9375/2em 0 -0.9375/2em @cloud, 0 0 0 0.375/2em @border, -2.1875/2em 0.6875/2em 0 -0.3125/2em @border, 2.0625/2em 0.9375/2em 0 -0.5625/2em @border;
+}
+
+.cloud::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -0.5/2em;
+    display: block;
+    width: 4.5625/2em;
+    height: 1/2em;
+    background: @cloud;
+    // background: currentColor;
+    box-shadow: 0 0.4375/2em 0 -0.0625/2em @border;
+}
+
+.cloud:nth-child(2) {
+    z-index: 0;
+    background: #fff;
+    box-shadow: -2.1875/2em 0.6875/2em 0 -0.6875/2em @border, 2.0625/2em 0.9375/2em 0 -0.9375/2em @border, 0 0 0 0.375/2em @border, -2.1875/2em 0.6875/2em 0 -0.3125/2em @border, 2.0625/2em 0.9375/2em 0 -0.5625/2em @border;
+    // opacity: 0.3;
+    transform: scale(0.5) translate(6/2em, -3/2em);
+    animation: cloud 4s linear infinite;
+}
+
+.cloud:nth-child(2)::after {
+    background: #fff;
+}
+
+.sun {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2.5/2em;
+    height: 2.5/2em;
+    margin: -1.25/2em;
+    background:@sun;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0.375/2em @border;
+    animation: spin 12s infinite linear;
+}
+
+.rays {
+    position: absolute;
+    top: -2/2em;
+    left: 50%;
+    display: block;
+    width: 0.375/2em;
+    height: 1.125/2em;
+    margin-left: -0.1875/2em;
+    background: #fff;
+    border-radius: 0.25/2em;
+    box-shadow: 0 5.375/2em @rays;
+}
+
+.rays::before,
+.rays::after {
+    content: '';
+    position: absolute;
+    top: 0/2em;
+    left: 0/2em;
+    display: block;
+    width: 0.375/2em;
+    height: 1.125/2em;
+    transform: rotate(60deg);
+    transform-origin: 50% 3.25/2em;
+    background: #fff;
+    border-radius: 0.25/2em;
+    box-shadow: 0 5.375/2em @border;
+}
+
+.rays::before {
+    transform: rotate(120deg);
+}
+
+.cloud + .sun {
+    margin: -2/2em 1/2em;
+}
+
+.rain,
+.lightning,
+.snow {
+    position: absolute;
+    z-index: 2;
+    top: 40%;
+    left: 50%;
+    width: 3.75/2em;
+    height: 3.75/2em;
+    margin: 0.375/2em 0 0 -2/2em;
+    background: none;
+}
+
+.rain::after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    width: 1.125/2em;
+    height: 1.125/2em;
+    margin: -1/2em 0 0 -0.25/2em;
+    background: #0cf;
+    border-radius: 100% 0 60% 50%, 60% 0 100% 50%;
+    border-top-left-radius: 100% 60%;
+    border-top-right-radius: 0% 0%;
+    border-bottom-right-radius: 60% 100%;
+    border-bottom-left-radius: 50% 50%;
+    box-shadow: 0.625/2em 0.875/2em 0 -0.125/2em rgba(255, 255, 255, 0.2), -0.875/2em 1.125/2em 0 -0.125/2em rgba(255, 255, 255, 0.2), -1.375/2em -0.125/2em 0 rgba(255, 255, 255, 0.2);
+    transform: rotate(-28deg);
+    animation: rain 3s linear infinite;
+}
+
+.bolt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -0.25/2em 0 0 -0.125/2em;
+    color: #fff;
+    opacity: 1;
+    animation: lightning 2s linear infinite;
+}
+
+.bolt:nth-child(2) {
+    width: 0.5/2em;
+    height: 0.25/2em;
+    margin: -1.75/2em 0 0 -1.875/2em;
+    transform: translate(2.5/2em, 2.25/2em);
+    opacity: 0.6;
+    animation: lightning 1.5s linear infinite;
+}
+
+.bolt::before,
+.bolt::after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    margin: -1.625/2em 0 0 -1.0125/2em;
+    border-top: 1.25/2em solid transparent;
+    border-right: 0.75/2em solid;
+    border-bottom: 0.75/2em solid;
+    border-left: 0.5/2em solid transparent;
+    transform: skewX(-10deg);
+}
+
+.bolt::after {
+    margin: -0.25/2em 0 0 -0.25/2em;
+    border-top: 0.75/2em solid;
+    border-right: 0.5/2em solid transparent;
+    border-bottom: 1.25/2em solid transparent;
+    border-left: 0.75/2em solid;
+    transform: skewX(-10deg);
+}
+
+.bolt:nth-child(2)::before {
+    margin: -0.75/2em 0 0 -0.5/2em;
+    border-top: 0.625/2em solid transparent;
+    border-right: 0.375/2em solid;
+    border-bottom: 0.375/2em solid;
+    border-left: 0.25/2em solid transparent;
+}
+
+.bolt:nth-child(2)::after {
+    margin: -0.125/2em 0 0 -0.125/2em;
+    border-top: 0.375/2em solid;
+    border-right: 0.25/2em solid transparent;
+    border-bottom: 0.625/2em solid transparent;
+    border-left: 0.375/2em solid;
+}
+
+.flake::before,
+.flake::after {
+    content: '\2744';
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    margin: -1.025/2em 0 0 -1.0125/2em;
+    color: #fff;
+    list-height: 1/2em;
+    opacity: 0.6;
+    animation: spin 8s linear infinite reverse;
+}
+
+.flake::after {
+    margin: 0.125/2em 0 0 -1/2em;
+    font-size: 2/2em;
+    opacity: 1;
+    animation: spin 14s linear infinite;
+}
+
+.flake:nth-child(2)::before {
+    margin: -0.5/2em 0 0 0.25/2em;
+    font-size: 1.5/2em;
+    opacity: 0.6;
+    animation: spin 10s linear infinite;
+}
+
+.flake:nth-child(2)::after {
+    margin: 0.375/2em 0 0 0.125/2em;
+    font-size: 3/2em;
+    opacity: 1;
+    animation: spin 16s linear infinite reverse;
+}
+
+
+/* Animations */
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes cloud {
+    0%{
+      opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100%{
+      opacity: 0;
+      transform: scale(0.5) translate(-200%, -3/2em);
+    }
+}
+
+@keyframes rain {
+    0% {
+        background: #0cf;
+        box-shadow: 0.625/2em 0.875/2em 0 -0.125/2em rgba(255, 255, 255, 0.2), -0.875/2em 1.125/2em 0 -0.125/2em rgba(255, 255, 255, 0.2), -1.375/2em -0.125/2em 0 #0cf;
+    }
+    25% {
+        box-shadow: 0.625/2em 0.875/2em 0 -0.125/2em rgba(255, 255, 255, 0.2), -0.875/2em 1.125/2em 0 -0.125/2em #0cf, -1.375/2em -0.125/2em 0 rgba(255, 255, 255, 0.2);
+    }
+    50% {
+        background: rgba(255, 255, 255, 0.3);
+        box-shadow: 0.625/2em 0.875/2em 0 -0.125/2em #0cf, -0.875/2em 1.125/2em 0 -0.125/2em rgba(255, 255, 255, 0.2), -1.375/2em -0.125/2em 0 rgba(255, 255, 255, 0.2);
+    }
+    100% {
+        box-shadow: 0.625/2em 0.875/2em 0 -0.125/2em rgba(255, 255, 255, 0.2), -0.875/2em 1.125/2em 0 -0.125/2em rgba(255, 255, 255, 0.2), -1.375/2em -0.125/2em 0 #0cf;
+    }
+}
+
+@keyframes lightning {
+    45% {
+        color: #fff;
+        background: #fff;
+        opacity: 0.2;
+    }
+    50% {
+        color: #0cf;
+        background: #0cf;
+        opacity: 1;
+    }
+    55% {
+        color: #fff;
+        background: #fff;
+        opacity: 0.2;
+    }
+}

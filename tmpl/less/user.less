@@ -1,0 +1,105 @@
+@import 'fontsize';
+.user {
+    background: #eee;
+    min-height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+.u-area {
+    overflow: hidden;
+    background-size: 100% auto;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: top center;
+    width: 100vw;
+    height: 300rpx;
+    .u-icon {
+        width: 130rpx;
+        height: 130rpx;
+        border-radius: 50%;
+        margin: 50rpx auto 30rpx auto;
+        display: block;
+    }
+    .u-name {
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 40rpx;
+        color: #fff;
+        margin-bottom: 40rpx;
+    }
+}
+
+.u-info {
+    padding: 20rpx 0;
+    box-sizing: border-box;
+    margin:0;
+	background: #333;
+    
+}
+
+.ui-item {
+    text-align: center;
+    .ui-title,.ui-num{
+    	color: #fff;
+    }
+    border-right: 1rpx solid #666;
+    &:last-child{
+    	border-right: 0;
+    }
+    .font3;
+    .ui-num {
+        margin: 10rpx -0px 0rpx 0;
+        color: #ddd;
+        .font4;
+    }
+    
+}
+.u-btn{
+	background: #fff;
+	margin: 30rpx -0px;
+}
+.u-item {
+    .font4;
+    padding: 30rpx;
+    border-bottom: 1rpx solid #ccc;
+    color: #333;
+    &:last-child{
+    	border-bottom: 0;
+    }
+    &:nth-child(1):before{
+		.colour1;
+    }
+    &:nth-child(2):before{
+		.colour2;
+    }
+    &:nth-child(3):before{
+		.colour3;
+    }
+    &:nth-child(4):before{
+		.colour4;
+    }
+    &:nth-child(5):before{
+		.colour5;
+    }
+    .iconfont{
+    	float: right;
+    }
+    &.click {
+        background: #fff;
+        color: #000;
+    }
+}
+.new-message{
+    display: inline-block;
+    .font6;
+    width: 30rpx;
+    height: 30rpx;
+    .bgc2;
+    border-radius: 50%;
+    color: #fff;
+    line-height: 30rpx;
+    text-align: center;
+    margin-left: 10rpx;
+}

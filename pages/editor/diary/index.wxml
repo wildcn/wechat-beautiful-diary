@@ -1,0 +1,30 @@
+<view class="editor-diary" style="background-image: url(http://p1.bpimg.com/1949/0da93727ea2d03e0.jpg);">
+  <view class="ed-meau">
+  <!-- 加载日期选择 -->
+  <import src="/template/as/tools.wxml"/>
+  <template is="selectDate" data="{{...today}}"/>
+    <view class="ed-iconarea">
+      <!-- <view class="iconfont icon_{{editor.mood.curType}} ed-mood ed-icon font4"></view> -->
+    </view>
+  </view>
+  <view class="ed-input font2">
+    <view class="ed-title flex">
+      <view class="font1 ed-h1 flex1"  bindtap="titleChange">{{editor.diary.title}}</view>
+      <view class="ed-status">
+        <view data-public="0" catchtap="statusChange" class="ed-private {{editor.diary.public == 0 && 'active'}}">私密</view>
+        <view data-public="1" catchtap="statusChange" class="ed-public {{editor.diary.public == 1 && 'active'}}">公开</view>
+      </view>
+    </view>
+  
+    <textarea class="font4 ed-text"  placeholder-style="color:#999;" placeholder="记录此刻，铭记一生~" maxlength="-1" bindblur="contentChange" value="{{editor.diary.content}}" auto-focus/>
+  </view>
+  <view class="pof ed-tips">
+  <view class="iconfont icon_location ed-location font4">{{curData.location.name}} {{curData.weather.text}}</view>
+  <view class="world-count font4 ">{{editor.diary.contentNumCount || 0}}</view>
+  <view class="save font2" bindtap="savediary">保存</view>
+  </view>
+</view>
+
+<!-- wetoast -->
+<import src="/template/as/tools.wxml"/>
+<template is="wetoast" data="{{...__wetoast__}}"/>

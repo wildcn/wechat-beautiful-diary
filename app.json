@@ -1,0 +1,61 @@
+{
+    "pages": [
+        "pages/home/index",
+        "pages/user/email/index",
+        "pages/item/chat/index",
+        "pages/column/square/index",
+        "pages/item/square/index",
+        "pages/user/list/index",
+        "pages/user/aboutus/index",
+        "pages/column/calendar/index",
+        "pages/column/mood/index",
+        "pages/column/discover/index",
+        "pages/column/diary/index",
+        "pages/column/anniversary/index",
+        "pages/column/history/index",
+
+        "pages/editor/diary/index",
+        "pages/editor/mood/index",
+        "pages/editor/feedback/index",
+        "pages/item/news/index"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#f8a8ca",
+        "navigationBarTitleText": "美日美历",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "color": "#999",
+        "selectedColor": "#fff",
+        "backgroundColor": "#f8a8ca",
+        "borderStyle": "white",
+        "list": [{
+            "pagePath": "pages/home/index",
+            "text": "首页",
+            "iconPath": "images/tabbar/home.png",
+            "selectedIconPath": "images/tabbar/home-h.png"
+        }, {
+            "pagePath": "pages/column/diary/index",
+            "text": "日记",
+            "iconPath": "images/tabbar/diary.png",
+            "selectedIconPath": "images/tabbar/diary-h.png"
+        }, {
+            "pagePath": "pages/column/mood/index",
+            "text": "心情",
+            "iconPath": "images/tabbar/mood.png",
+            "selectedIconPath": "images/tabbar/mood-h.png"
+        }, {
+            "pagePath": "pages/column/calendar/index",
+            "text": "日历",
+            "iconPath": "images/tabbar/calendar.png",
+            "selectedIconPath": "images/tabbar/calendar-h.png"
+        }, {
+            "pagePath": "pages/user/list/index",
+            "text": "设置",
+            "iconPath": "images/tabbar/user.png",
+            "selectedIconPath": "images/tabbar/user-h.png"
+        }],
+        "enablePullDownRefresh": false
+    }
+}

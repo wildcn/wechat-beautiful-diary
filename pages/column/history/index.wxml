@@ -1,0 +1,25 @@
+<import src="/template/as/tools.wxml" />
+
+<!--日历-->
+<view class="column column-history">
+    <!--  -->
+    <!-- 历史上的今天 -->
+    <view class="today-history">
+    <view class="vbox-head font3 boc3 layout pb10 flex">
+        <text class="vbox-title colour3">历史上的今天</text>
+        <view class="colour1 font4 fsi todaydate pl10"><template is="selectDate" class="fr" data="{{...today}}" />  </view>
+        
+    </view>
+        <view class="today-content layout">
+            <view class="th-title mv10 font6" wx:for="{{column.history.todayHistory}}" wx:key="todayHistory"><text class="today-year colour3">{{item.year}}年</text><text class="today-area"> {{item.title}}</text></view>
+            <view class="th-title mv10 font6 today-more tar colour1" bindtap="showAllHistory" wx:if="{{column.history.showAllHistory}}">查看全部>></view>
+        </view>
+
+    </view>
+    <!-- 入口 -->
+    <template is="entrance" data="{{...module.render}}"/>
+</view>
+
+
+<import src="/template/module/bar.wxml"/>
+<!-- 底部功能栏 -->

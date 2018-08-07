@@ -1,0 +1,29 @@
+.rotate360{
+	animation: rotate360 3s infinite linear;
+}
+.an-left-show{
+	animation: left-move-200 1s ease-in-out;
+	animation-fill-mode : forwards;
+}
+.an-left-hide{
+	animation: right-move-200 0.3s ease-in-out;
+}
+@keyframes rotate360 {
+	from { transform:rotate(0deg); }
+	to { transform:rotate(360deg); }
+}
+
+@keyframes left-move-200 {
+	0% { transform:translateX(0rpx); }
+	100% { transform:translateX(-310rpx); }
+}
+@keyframes right-move-200 {
+	0% { transform:translateX(-310rpx); }
+	100% { transform:translateX(0rpx); }
+}
+@keyframes flip {
+	0% { transform:rotateX(0deg);color:inherit; }
+	10% { transform:rotateX(180deg);color: #f00; }
+	20% { transform:rotateX(0deg); color:inherit;}
+	100% { transform:rotateX(0deg); color:inherit;}
+}

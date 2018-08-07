@@ -1,0 +1,64 @@
+
+<!-- wetoast -->
+<import src="/template/as/tools.wxml"/>
+<import src="/template/module/list.wxml"/>
+<template is="wetoast" data="{{...__wetoast__}}"/>
+
+<view class="column home square square-detail">
+<!-- 用户发言列表 -->
+	<view class="cs-content">
+		<view class="cs-item csi-diary">
+			<view class="csi-header flex">
+				<view class="csi-icon ">
+					<image src="{{news.square.avatarUrl}}" />
+					<view class="csi-gender iconfont icon_{{news.square.gender == 1?'male':'female'}}"></view>
+				</view>
+				<view class="csi-info flex1">
+					<view class="csi-name">{{news.square.nickName}}</view>
+					<view class="csi-desc">
+						<view class="csi-time dib">{{news.square.update_time}}</view><view class="cis-agree dib iconfont icon_brow">{{news.square.brow}}</view>
+						<view class="cis-agree dib iconfont icon_{{news.square.isAgree?'agreeclicked':'agree'}} {{news.square.isAgree?'colour2':''}}">{{news.square.agree}}</view>
+					</view>
+				</view>
+				<view class="iconfont icon_bottom"></view>
+			</view>
+			
+			<view class="csi-detail"  data-index="{{index}}" catchtap="csiClick">
+				<view class="csi-title font2">{{news.square.title}}</view>
+				
+				<view class="csi-content">
+					<text class="csi-text" wx:for="{{news.square.formatContent}}" wx:key="square-list-content" wx:for-item="contentItem" wx:if="{{contentItem.type == 'text'}}">{{contentItem.content}}</text>
+					<image wx:for="{{news.square.content}}" wx:key="square-list-content" wx:for-item="contentItem" wx:if="{{contentnews.square.type == 'img'}}" src="contentnews.square.src" mode="widthFix" />
+				</view>
+				<view class="csi-tag"><view class="csi-tag1 dib" wx:for="{{news.square.tag}}" wx:key="square-list-tag" wx:if="{{news.square.tag}}" wx:for-item="tagItem">#{{tagItem}}#</view></view>
+				<view class="csi-location iconfont icon_location">{{news.square.path}}</view>
+			</view>
+			<view class="csi-comments">
+				<view class="csic-title">用户评论<view class="iconfont icon_write dib colour1" data-id="{{news.square.id}}" data-date="{{news.square.date}}" catchtap="artCommentClick" data-user="{{news.square.nickName}}" data-type="diary" data-method="comments">发表评论</view></view>
+				<view class="csic-item" wx:if="{{news.square.commentsNum}}" wx:for="{{news.square.comments}}" wx:key="csic">
+					<view class="csi-header flex" catchtap="csiClick">
+						<view class="csi-icon ">
+							<image src="{{item.avatarUrl}}" />
+						</view>
+						<view class="csi-info flex1">
+							<view class="csi-name">{{item.nickName}}<view class="csi-gender iconfont dib icon_{{item.gender == 1?'male':'female'}}"></view></view>
+							<view class="csi-desc">
+								<view class="csi-time dib">{{item.time}}  </view>
+							</view>
+						</view>
+						<view class="iconfont font6 csi-floor">{{index+1}}楼</view>
+					</view>
+					<view class="csi-deital">
+						<view class="csi-content font4" wx:for="{{item.formatContent}}" wx:key="commentFloor{{index}}" wx:for-item="commentItem"> 
+							{{commentItem.content}}
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		
+
+
+	</view>
+</view>
+<template is="tempInput" data="{{...module.tempInput}}"></template>

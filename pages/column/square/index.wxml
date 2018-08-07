@@ -1,0 +1,47 @@
+
+<!-- wetoast -->
+<import src="/template/as/tools.wxml"/>
+<import src="/template/module/list.wxml"/>
+<template is="wetoast" data="{{...__wetoast__}}"/>
+
+<view class="column home square">
+<!-- 用户发言列表 -->
+	<view class="cs-content">
+		<view class="cs-item csi-diary" wx:for="{{column.square.itemList}}" wx:key="square-newslist">
+			<view class="csi-header flex" data-id="{{item.id}}" data-date="{{item.date}}"  catchtap="csiClick">
+				<view class="csi-icon ">
+					<image src="{{item.avatarUrl}}" />
+					<view class="csi-gender iconfont icon_{{item.gender == 1?'male':'female'}}"></view>
+				</view>
+				<view class="csi-info flex1">
+					<view class="csi-name">{{item.nickName}}</view>
+					<view class="csi-desc">
+						<view class="csi-time dib">{{item.update_time}}</view><view class="cis-agree dib iconfont icon_brow">{{item.brow}}</view><view class="cis-agree dib iconfont icon_{{item.isAgree?'agreeclicked':'agree'}} {{item.isAgree?'colour2':''}}" data-index="{{index}}" data-type="diary" catchtap="artAgreeClick">{{item.agree}}</view>
+					</view>
+				</view>
+				<view class="iconfont icon_right"></view>
+			</view>
+			
+			<view class="csi-detail"  data-id="{{item.id}}" data-date="{{item.date}}"  catchtap="csiClick">
+				<view class="csi-title font2" wx:if="{{!item.type == 'diary'}}">{{item.title}}</view>
+				<view class="csi-tag"><view class="csi-tag1 dib" wx:for="{{item.tag}}" wx:key="square-list-tag" wx:if="{{item.tag}}" wx:for-item="tagItem">#{{tagItem}}#</view></view>
+				<view class="csi-content" wx:if="{{item.openFlag}}">
+					<text class="csi-text" wx:for="{{item.content}}" wx:key="square-list-content" wx:for-item="contentItem" wx:if="{{contentItem.type == 'text'}}">{{contentItem.content}}</text>
+					<image wx:for="{{item.content}}" wx:key="square-list-content" wx:for-item="contentItem" wx:if="{{contentItem.type == 'img'}}" src="contentItem.src" mode="widthFix" />
+				</view>
+				<view class="csi-location iconfont icon_location">{{item.path}}</view>
+			</view>
+			<view class="csi-nav flex">
+				<view class="csi-nav-btn iconfont icon_{{item.isAgree?'agreeclicked':'agree'}} {{item.isAgree?'colour2':''}}" data-index="{{index}}" data-type="diary" catchtap="artAgreeClick">{{item.agree}}</view>
+				
+				<view class="csi-nav-btn iconfont icon_comments" data-id="{{item.id}}"  catchtap="artCommentClick" data-user="{{item.nickName}}" data-type="diary" data-method="comments">{{item.commentsNum}}</view>
+
+				<view data-id="{{item.userId}}" data-receivename="{{item.nickName}}" data-index="{{index}}" class="csi-nav-btn iconfont icon_wechat colour3" catchtap="chatToUser">私信</view>
+				<!-- <view class="csi-nav-btn iconfont icon_share" catchtap="shareTips">分享</view> -->
+			</view>
+		</view>
+
+
+	</view>
+</view>
+<template is="tempInput" data="{{...module.tempInput}}"></template>

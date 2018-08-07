@@ -1,0 +1,235 @@
+@import 'init';
+@import 'fontsize';
+@import 'as/animate';
+@import 'layout';
+.anniversary {
+    background-size: 100% auto;
+    min-height: 100vh;
+}
+
+// 最新倒计时
+.ca-last {
+    width: 100vw;
+    height: 50vh;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    font-weight: lighter;
+    .ca-lastdays {
+        color: #fff;
+        font-size: 120rpx;
+        text-align: center;
+        margin: 100rpx auto 10rpx auto;
+        font-weight: 100;
+        position: relative;
+    }
+    .ca-flag {
+        width: 50vw;
+        display: block;
+        margin: 0 auto;
+        height: 100rpx;
+        .ca-icon {
+            color: #fff;
+            font-size: 80rpx;
+            text-align: center;
+            width: 150rpx;
+            line-height: 100rpx;
+        }
+        .ca-line {
+            position: relative;
+        }
+        .ca-line::after {
+            position: absolute;
+            content: '';
+            height: 1rpx;
+            width: 100%;
+            background: #fff;
+            left: 0;
+            top: 50%;
+        }
+    }
+    .ca-title {
+        font-size: 60rpx;
+        color: #fff;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+// 列表
+.ca-list {
+    width: 100vw;
+    box-sizing: border-box;
+    height: auto;
+    font-weight: lighter;
+    .ca-item {
+        box-sizing: border-box;
+        background: rgba(255, 255, 255, 0.5);
+        padding: 0 30rpx;
+        margin-bottom: 5rpx;
+        border-left: 10rpx solid;
+        height: 100rpx;
+        .ca-icon {
+            width: 80rpx;
+            padding-right: 10rpx;
+            color: #fff;
+            height: 100rpx;
+            line-height: 100rpx;
+            font-size: 60rpx;
+            text-align: center;
+        }
+        .ca-content {
+            padding: 15rpx;
+            position: relative;
+            .ca-title {
+                position: absolute;
+                top: 10rpx;
+                left: 0;
+            }
+            .ca-time {
+                .font5;
+                color: #555;
+                position: absolute;
+                bottom: 10rpx;
+                left: 0;
+            }
+        }
+        .ca-lastdays {
+            font-size: 60rpx;
+            color: #888;
+            text-align: center;
+            line-height: 100rpx;
+        }
+    }
+}
+
+.ca-add {
+    border-left: 0!important;
+    background: rgba(255, 255, 255, 0.8)!important;
+    padding: 0 !important;
+    .ca-select {
+        margin-right: 10rpx;
+        &::after {
+            content: '';
+            background: #fff;
+            position: absolute;
+            right: 0;
+            top: 10rpx;
+            height: 80rpx;
+            width: 1rpx;
+        }
+    }
+    .ed-curtime {
+        padding: 20rpx;
+        height: 60rpx;
+        border-radius: 10rpx;
+        box-sizing: border-box;
+        color: #fff;
+        text-align: center;
+    }
+    input {
+        height: 60rpx;
+        margin: 20rpx 0px;
+        border-bottom: 1rpx solid #555;
+        .font4;
+        color: #333;
+    }
+    .ca-btn {
+        font-size: 60rpx;
+        line-height: 100rpx;
+        height: 100rpx;
+        color: #fff;
+        text-align: center;
+        width: 100rpx;
+        // margin-left: 20rpx;
+        &:first-child {
+            margin-left: 20rpx;
+        }
+    }
+    .ca-add-btn {
+        position: relative;
+        font-size: 50rpx;
+        text {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            bottom: -25rpx;
+            left: -3rpx;
+        }
+    }
+}
+
+.ca-scroll {
+    height: 520rpx;
+}
+
+.ca-icon-select {
+    background: rgba(255, 255, 255, 0.8);
+    display: block;
+    padding: 25rpx;
+    .iconfont {
+        width: 70rpx;
+        height: 70rpx;
+        display: inline-block;
+        font-size: 50rpx;
+        text-align: center;
+        line-height: 70rpx;
+        .colour1;
+        &.select {
+            border-radius: 10rpx;
+            text-align: left;
+            width: 140rpx;
+            border-bottom: 1rpx solid @color2;
+            text {
+                font-size: 40rpx;
+                color: @color2;
+            }
+            &:before {
+                color: @color2;
+            }
+        }
+    }
+}
+
+.ca-lastdays {
+    vertical-align: top;
+}
+
+.ca-last .ca-icon-flag {
+    .rotate360;
+}
+
+.ca-icon-flag {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 30rpx;
+    text-align: center;
+}
+
+.ca-type-countdown {
+    .boc2;
+    &,
+    .ca-lastdays,
+    .ca-icon-flag,
+    .ca-time {
+        .colour2!important;
+    }
+}
+
+.ca-item .ca-lastdays {
+    vertical-align: top;
+    .ca-item-flag {
+        font-size: 20rpx;
+        padding: 2rpx 5rpx;
+        .bgc1;
+        border-radius: 5rpx;
+        float: right;
+        height: 30rpx;
+        line-height: 30rpx;
+        color: #fff;
+        margin: 20rpx 0 0 10rpx;
+        &.ca-item-type-countdown{
+            .bgc2;
+        }
+    }
+}

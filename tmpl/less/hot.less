@@ -1,0 +1,150 @@
+@import 'init';
+@import 'fontsize';
+@import 'iconfont';
+// 全局推荐模块
+.ch-title {
+    position: relative;
+    margin: 10rpx 0;
+    height: 50rpx;
+    border-bottom: 1rpx solid #eee; 
+    .ch-name {
+        position: absolute;
+        left: 0rpx;
+        top: 0rpx;
+        .font4;
+        display: block;
+        line-height: 30rpx;
+    }
+    .ch-time {
+        position: absolute;
+        left: 0rpx;
+        top: 35rpx;
+        .font8;
+        color: #555;
+    }
+    .ch-go {
+        // position: absolute;
+        // right: 10rpx;
+        // top: 10rpx;
+        height: 100%;
+        float: right;
+        margin-right: 10rpx;
+        line-height: 100%;
+    }
+}
+
+.common-hot {
+    margin: 30rpx;
+    overflow: hidden;
+    text {
+        margin: 0;
+    }
+    .ch-title{
+        margin-bottom: 20rpx;
+    }
+    
+}
+.ch-area {
+        background: #fff;
+        box-sizing: border-box;
+        border-radius: 10rpx;
+        overflow: hidden;
+        .ch-img {
+            width: 100%;
+            height: 300rpx;
+            background-size: 100% auto;
+            background-position: center center;
+        }
+        .cha-title {
+            padding: 20rpx;
+        }
+    }
+// 今日
+.common-today {
+    .ch-title {
+        height: 40rpx;
+        .ch-name {
+            position: relative;
+            float: left;
+            line-height: 100%;
+            height: 40rpx;
+            left: 0;
+        }
+        .ch-go {
+            height: 40rpx;
+        }
+    }
+    .ch-area {
+        .ch-item {
+            height: 50rpx;
+            padding: 0 10rpx;
+            border-bottom: 1px dashed #eee;
+            margin-bottom: 20rpx;
+            padding-bottom: 20rpx;
+            &:last-child {
+                border-bottom: 0;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
+        .cha-icon {
+            width: 50rpx;
+            height: 50rpx;
+            font-size: 30rpx;
+            line-height: 50rpx;
+            text-align: center;
+            background: @blue;
+            border-radius: 10rpx;
+            color: #fff;
+            margin-right: 10rpx;
+            float: left;
+            display: inline-block;
+        }
+        .ch-top {
+            display: block;
+            &::after {
+                content: '';
+                clear: both;
+                display: table;
+            }
+        }
+        .cha-content {
+            float: left;
+            display: inline-block;
+            height: 50rpx;
+            view {
+                padding-top: 0;
+            }
+            .cha-title {
+                padding-bottom: 5rpx;
+            }
+            .cha-time {
+                .font8;
+                color: #555;
+            }
+        }
+        .cha-text {
+            padding: 10rpx 0px;
+            color: #333;
+        }
+    }
+    .ch-column {
+        padding-bottom: 0;
+        border-bottom: 1px dashed #eee;
+        &:last-child {
+            border-bottom: 0;
+        }
+        .ch-item {
+            height: auto;
+        }
+    }
+    .ch-more {
+        width: 100%;
+        height: 40rpx;
+        background: #ccc;
+        text-align: center;
+        border-radius: 10rpx;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+}

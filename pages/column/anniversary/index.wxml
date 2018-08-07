@@ -1,0 +1,45 @@
+<import src="/template/as/tools.wxml"/>
+<import src="/template/module/bar.wxml"/>
+<view class="anniversary column column-anniversary" style="background-image:url(http://i1.piimg.com/1949/c72607b83190eda3.jpg)">
+	<template is="wetoast" data="{{...__wetoast__}}"/>
+	<view class="ca-last" >
+		<view class="ca-lastdays">{{column.anniversaryFirst.lastDay}}<view class="ca-icon-flag iconfont icon_{{column.anniversaryFirst.up}}"></view></view>
+		<view class="ca-flag flex">
+			<view class="ca-line flex1"></view>
+			<view class="ca-icon iconfont icon_{{column.anniversaryFirst.iconType}}"></view>
+			<view class="ca-line flex1"></view>
+		</view>
+		<view class="ca-title">{{column.anniversaryFirst.title}}</view>
+	</view>
+	<view class="ca-list">
+		<view class="ca-item ca-add flex">
+			<view class="ca-select bgc1">
+				  <!-- 加载日期选择 -->
+ 				<template is="selectDate" data="{{...today}}"/>
+			</view>
+			<input class="flex1" maxlength="16" placeholder="纪念一下吧~" value="{{editor.anniversary.title}}" bindinput="bindinput"/>
+			<view class="ca-btn ca-add-btn iconfont icon_{{column.anniversaryIconSelect || 'clock'}} bgc3" bindtap="addIcon"><text wx:if="{{!column.anniversaryIconSelect}}">...</text></view>
+			<view class="ca-btn iconfont icon_add bgc1" bindtap="addAnniversary"></view>
+		</view>
+		<!-- 图标选择 -->
+		<view class="ca-icon-select" wx:if="{{module.iconList}}">
+			<view bindtap="iconSelect" data-index="{{index}}" data-type="{{item.type}}" class="iconfont icon_{{item.type}} {{item.class}} {{item.name?'icon_select':''}}" wx:for="{{column.anniversaryIconList}}" wx:key="anniversaryIconList"><text>{{item.name}}</text></view>
+		</view>
+		<!-- 区域滚动 -->
+		<scroll-view scroll-y="true" class="ca-scroll" >
+			<view class="ca-item flex boc1 ca-type-{{item.up}}" wx:for="{{column.anniversary}}" wx:key="anniversaryList">
+			<view class="ca-icon iconfont icon_{{item.iconType || 'clock'}} colour{{item.up == 'countdown'?2:1}}"></view>
+			<view class="flex1 ca-content">
+				<view class="ca-title">{{item.title}}</view>
+				<view class="ca-time">{{item.cdate}}</view>
+			</view>
+			<view class="ca-lastdays">{{item.lastDay}}<view class="ca-item-flag ca-item-type-{{item.up}}">{{item.up == 'countdown'?'期待':'纪念'}}</view></view>
+		</view>
+		</scroll-view>
+		
+		
+		
+	</view>
+	<!-- 底部功能栏 -->
+		
+</view>

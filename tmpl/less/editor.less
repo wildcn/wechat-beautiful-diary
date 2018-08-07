@@ -1,0 +1,138 @@
+@import 'init';
+@import 'layout';
+@import 'fontsize';
+@import 'as/selectDate';
+.editor-diary {
+    background-size: 100% auto;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.ed-meau {
+    // height: 8vh;
+    .ed-curtime {
+        background: none!important;
+        border-color: #333!important;
+        color: #333;
+        .ed-bottom {
+            color: #333;
+        }
+    }
+}
+
+.ed-iconarea {
+    .dib;
+    float: right;
+    margin-right: 10rpx;
+    margin-top: 10rpx;
+    .ed-icon {
+        background: @blue;
+        color: #fff;
+        border-radius: 30rpx;
+        padding: 10rpx;
+        text-align: center;
+        line-height: 1em;
+        margin: 0 10rpx;
+        height: 30rpx;
+    }
+}
+
+.ed-input {
+    margin: 0 15prx 15rpx 15rpx;
+    height: 70vh;
+    overflow-y: scroll;
+    line-height: 2em;
+    textarea {
+        height: 100%;
+        vertical-align: top;
+        width: 100%;
+        line-height: 50rpx;
+        font: 30rpx/50rpx;
+        color: #333;
+    }
+    .ed-h1 {
+        // border-bottom: 1rpx solid #555;
+        height: 60rpx;
+        margin: 0 20rpx 40rpx 20rpx;
+        color: #000;
+    }
+}
+
+.ed-text {
+    padding: 0 30rpx;
+    box-sizing: border-box;
+    height: 600rpx!important;
+    overflow-y: scroll;
+}
+
+.ed-tips {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 70rpx;
+    padding: 10rpx;
+    width: 100%;
+    box-sizing: border-box;
+    .ed-location {
+        padding: 10rpx;
+        box-sizing: border-box;
+        background: @blue;
+        color: #fff;
+        line-height: 1em;
+        display: inline-block;
+        border-radius: 10rpx;
+        margin-right: 10rpx;
+    }
+    .world-count {
+        position: absolute;
+        right: 10rpx;
+        bottom: 15rpx;
+        background: @blue;
+        padding: 10rpx 20rpx;
+        color: #fff;
+        height: 20rpx;
+        line-height: 20rpx;
+        border-radius: 20rpx;
+    }
+    .save {
+        width: 200rpx;
+        padding: 10rpx 20rpx;
+        background: @pink;
+        border-radius: 20rpx;
+        position: absolute;
+        bottom: 10rpx;
+        left: 50%;
+        margin-left: -100rpx;
+        text-align: center;
+        color: #fff;
+        letter-spacing: 5rpx;
+    }
+}
+.ed-title{
+    vertical-align: top;
+}
+.ed-status {
+    margin-right: 26rpx;
+    .ed-public,
+    .ed-private {
+        display: inline-block;
+        .font5;
+        background: #999;
+        height: 40rpx;
+        padding:0 10rpx;
+        line-height: 40rpx;
+        color: #eee;
+        &.active {
+            .bgc1;
+            color: #fff;
+        }
+    }
+    .ed-public{
+        border-top-right-radius: 10rpx;
+        border-bottom-right-radius: 10rpx;
+    }
+    .ed-private{
+        border-top-left-radius: 10rpx;
+        border-bottom-left-radius: 10rpx;
+    }
+}

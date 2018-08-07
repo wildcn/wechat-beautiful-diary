@@ -1,0 +1,63 @@
+.weather-date {
+  width: 550rpx;
+  height: 120rpx;
+  border-radius: 120rpx;
+  background: rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  vertical-align: top;
+  position: relative;
+  margin: 30rpx auto;
+  border: 1rpx solid rgba(255, 255, 255, 0.5);
+}
+.weather-date .wd-icon,
+.weather-date .wd-line,
+.weather-date .wd-temperature,
+.weather-date .wd-location,
+.weather-date .wd-usericon {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+.weather-date .wd-icon {
+  font-size: 24px;
+  width: 144rpx;
+  height: 120rpx;
+  box-sizing: border-box;
+}
+.weather-date .wd-line {
+  width: 1rpx;
+  height: 100rpx;
+  margin-top: 10rpx;
+  border-right: 1rpx solid rgba(255, 255, 255, 0.5);
+  margin-right: 10rpx;
+}
+.weather-date .wd-temperature {
+  font-size: 80rpx;
+  line-height: 130rpx;
+  position: relative;
+  color: #fff;
+  height: 100%;
+  margin: 0 0rpx 0 10rpx;
+}
+.weather-date .wd-location .wd-local,
+.weather-date .wd-location .wd-time {
+  height: 60rpx;
+  color: #fff;
+}
+.weather-date .wd-location .wd-local {
+  font-size: 30rpx;
+  line-height: 90rpx;
+}
+.weather-date .wd-location .wd-time {
+  line-height: 50rpx;
+  font-size: 24rpx;
+}
+.weather-date .wd-usericon {
+  position: absolute;
+  width: 100rpx;
+  height: 100rpx;
+  top: 10rpx;
+  right: 10rpx;
+  border-radius: 50%;
+  opacity: 0.9;
+}

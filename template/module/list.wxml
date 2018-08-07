@@ -1,0 +1,173 @@
+<template name="list">
+	<!-- 更新内容区域  只显示当天数据 -->
+	<view class="common-hot common-today">
+		<view class="ch-title">
+			<text class="ch-name font2">心灵花园</text>
+			<view class="iconfont icon_bottom ch-go"></view>
+		</view>
+		<view class="ch-area ch-column" wx:for="{{column.diary}}" wx:key="columnDiary">
+			<view class="ch-item  ch-diary" data-href='pages/editor/diary/index' bindtap="navigateTo">
+				<view class="ch-top">
+					<view class="cha-icon iconfont icon_diary"></view>
+				<view class="cha-content">
+					<view class="cha-title font4">{{item.title}}</view>
+					<view class="cha-time font4">{{item.date}}</view>
+				</view>
+				</view>
+				<view class="cha-text">
+					<text class="font4">{{item.content}}</text>
+				</view>
+			</view>
+		</view>
+		<view class="ch-more iconfont icon_bottom"></view>
+	</view>
+</template>
+
+<template name="news-image-txt">
+	<view class="ch-area" bindtap="everyDayClick" data-id="{{ID}}" data-href='pages/item/news/index'>
+		<image class="ch-img" src="{{image}}" mode="widthFix"></image>
+		<!-- <view class="ch-img" style="background-image: url({{image}});"></view> -->
+			<view class="cha-title font4">{{title}}</view>
+	</view>
+</template>
+
+<template name="toadyDone">
+	<!-- 更新内容区域  只显示当天数据 -->
+	<view class="common-hot common-today" wx:if="{{render.commonToday}}">
+		<view class="ch-title">
+			<text class="ch-name font2">今日完成</text>
+			<view class="iconfont icon_bottom ch-go"></view>
+		</view>
+		<view class="ch-area">
+
+		<view class="mv-item" wx:if="{{render.commonTodayDiary}}" data-href='pages/item/square/index?date={{todayDone.diaryData.date}}&id={{todayDone.diaryData.id}}' bindtap="navigateTo">
+			<view class="mv-icon iconfont icon_diary bgc1"></view>
+			<view class="mv-title">
+				<text class="mv-name">{{todayDone.diaryData.diaryShortContent}}</text>
+				<text class="mv-desc">{{todayDone.diaryData.saveTime}}</text>
+			</view>
+			<view class="iconfont icon_right mv-right"></view>
+		</view>
+
+		<view class="mv-item" wx:if="{{render.commonTodayMood}}" data-href='pages/editor/mood/index' bindtap="navigateTo">
+			<view class="mv-icon iconfont icon_diary bgc2"></view>
+			<view class="mv-title">
+				<text class="mv-name">您完成了心情记录：{{todayDone.moodData.name}}</text>
+				<text class="mv-desc">{{todayDone.moodData.saveTime}}</text>
+			</view>
+			<view class="iconfont icon_right mv-right"></view>
+		</view>
+		</view>
+	</view>
+</template>
+
+<!-- 信箱内容 -->
+<template name="userEmailList">
+	<view class="ue-li" wx:if="{{list.length == 0}}">
+		<view class="ue-list">
+			<view class="ue-title">暂无消息</view>
+		</view>
+	</view>
+	<view class="ue-li {{item.showContent && 'active'}} {{item.status == 0?'new':'old'}}" wx:for="{{list}}" wx:key="{{name}}">
+		<view class="ue-list" data-id="{{item.id}}" data-index="{{index}}" data-type="{{item.mtype}}" bindtap="userEmailClick">
+			<view class="ue-title">{{item.title}}<view class="ue-fr iconfont icon_{{item.showContent?'top':'bottom'}}"></view></view>
+			<view class="ue-time"> <text class="ue-flag">{{item.status == 0?'未读':'已读'}}</text> {{item.time}}</view>
+		</view>
+		<view class="ue-content" wx:if="{{item.showContent}}">
+			<text  wx:for="{{item.formatContent}}" wx:key="pe-content" wx:for-item="peItem" class="ue-p">{{peItem.content}}</text>
+		</view>
+		
+	</view>
+</template>
+
+
+<!-- 私信 -->
+<template name="userPrivateList">
+	<view class="ue-li" wx:if="{{list.length == 0}}">
+		<view class="ue-list">
+			<view class="ue-title">暂无消息</view>
+		</view>
+	</view>
+	<view class="ue-li" wx:for="{{last}}" wx:key="{{name}}" wx:for-item="mainItem" wx:for-index="mainIndex">
+		<view class="{{item.status == 0?'new':'old'}} {{item.identity == 'receive'?'receive':'send'}}" wx:for="{{mainItem}}" wx:key="{{name}}">
+		<view class="ue-list flex" data-id="{{item.id}}" data-index="{{mainIndex}}" data-type="{{item.mtype}}" catchtap="privateMessageClick">
+			<view class="ue-p-icon">
+				<image src="{{identity == 'send'?item.sendIcon:item.receiveIcon}}" mode="widthFix" />
+				<view wx:if="{{newNumList[index]}}" class="ue-p-num {{item.status == 0?'bgc2':'bgc_eee'}} font6">{{newNumList[index]}}</view>
+			</view>
+			<view class="ue-p-content flex1">
+				<view class="ue-p-name font5 colour1 iconfont icon_receive" wx:if="{{item.identity == 'receive'}}">{{item.sendName}}</view>
+				<view class="ue-p-name font5 colour1  iconfont icon_send" wx:if="{{item.identity == 'send'}}">{{item.receiveName}} </view>
+				<view class="ue-content">
+					<text  wx:for="{{item.formatContent}}" wx:key="pe-content" wx:for-item="peItem" class="ue-p">{{peItem.content}}</text>
+				</view>
+			</view>
+			<view class="ue-p-right font6">
+				<view class="dib font6 color-555">{{item.time}}</view>
+			</view>
+		</view>
+		</view>
+	</view>
+</template>
+
+<!-- 评论 -->
+<template name="userCommentsList">
+	<view class="ue-li" wx:if="{{list.length == 0}}">
+		<view class="ue-list">
+			<view class="ue-title">暂无消息</view>
+		</view>
+	</view>
+	<view class="ue-li {{item.status == 0?'new':'old'}}" wx:for="{{list}}" wx:key="{{name}}"  data-id="{{item.father}}" data-date="{{item.date}}"  bindtap="gotoDiaryDetail">
+		<view class="ue-list">
+			<view class="ue-title font4 iconfont icon_diary">{{item.title}}
+			</view>
+			<view class="ue-time dib">回复时间: {{item.time}}</view>
+			
+		</view>
+		<view class="ue-content">
+			<text  wx:for="{{item.formatContent}}" wx:key="pe-content" wx:for-item="peItem" class="ue-p">{{peItem.content}}</text>
+		</view>
+	</view>
+</template>
+
+
+<template name="tempInput" >
+	<view class="pof tempInput font4" wx:if="{{show}}">
+		<view class="tempInputTitle iconfont icon_{{icon}}">{{title}}</view>
+		<textarea fixed="true" bindinput="{{bindinput}}" class="font4" placeholder="{{placeholder}}" placeholder-class="{{placeholderClass}}" maxlength="{{maxlength}}" auto-focus/>
+		<button type="primary" size="default" bindtap="tempInputSubmit"> 提交 </button>
+		<button type="default" data-type="cancel" size="default" bindtap="tempInputSubmit"> 取消 </button>
+	</view>
+</template>
+
+<!-- 日记列表 -->
+
+<template name="diaryList">
+	<!-- 更新内容区域  只显示当天数据 -->
+	<view class="common-hot common-today">
+		<view class="ch-title">
+			<text class="ch-name font2">{{columnData.title}}</text>
+			<view class="iconfont icon_bottom ch-go"></view>
+		</view>
+		
+		<view class="mv-item"  wx:for="{{columnList}}" wx:key="columnDiary"   data-href='pages/item/square/index?date={{item.date}}&id={{item.id}}' data-date="{{item.date}}" bindtap="navigateTo" bindtouchmove="handletouchmove" bindtouchstart="handletouchstart" bindtouchend="handletouchend">
+			<view class="iconfont icon_{{item.public?'public':'private'}} mv-icon bgc{{item.public?3:1}}"></view>
+			<view class="mv-title">
+				<view class="mv-name">{{item.content || item.title}}</view>
+					<view class="mv-desc">{{item.date}}</view>
+			</view>
+			<view class="iconfont icon_right mv-right"></view>
+			<view class="mv-nav {{item.moveClass}}">
+				<view data-public="{{item.public}}" class="mv-nav-item mv-nav-public bgc{{item.public == 0?3:1}}" catchtap="listTapPublic" data-date="{{item.date}}">
+					设为{{item.public == 0?'公开':'私密'}}
+				</view>
+				<view class="mv-nav-item mv-nav-delete bgc2" catchtap="listTapDelete" data-date="{{item.date}}">
+					删除
+				</view>
+			</view>
+		</view>
+
+		
+	</view>
+</template>
+

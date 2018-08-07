@@ -1,0 +1,14 @@
+/**app.wxss**/
+@import "./public/wxss/iconfont.wxss";
+@import "./public/wxss/fontsize.wxss";
+@import "./public/wxss/layout.wxss";
+@import "./public/wxss/vbox.wxss";
+@import "./public/wxss/vbtn.wxss";
+@import "./public/wxss/stage.wxss";
+@import "./public/wxss/util.wxss";
+@import "./public/wxss/loading.wxss";
+/*webtoast*/
+@import "./public/wxss/as/webtoast.wxss";
+@import "./public/wxss/godball.wxss";
+
+

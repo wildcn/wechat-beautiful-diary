@@ -1,0 +1,19 @@
+<import src="/template/module/bar.wxml" /> 
+<import src="/template/as/tools.wxml" /> 
+<template is="wetoast" data="{{...__wetoast__}}" /> 
+<!-- 背景 --> 
+<view class="column home column-mood"> 
+<view class="cm-radar">	
+	<view class="ch-title">
+			<text class="ch-name">心情驿站</text>
+			<view class="iconfont icon_bottom ch-go"></view>
+		</view>
+	<template is="radar" data="{{...column}}" /> 
+</view>
+
+<template is="entrance" data="{{...render}}" /> 
+<!-- home end --> 
+</view> 
+
+<!-- 底部功能栏 --> 
+

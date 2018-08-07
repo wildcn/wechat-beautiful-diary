@@ -1,0 +1,227 @@
+.font1 {
+  font-size: 40rpx!important;
+}
+.font2 {
+  font-size: 36rpx!important;
+}
+.font3 {
+  font-size: 32rpx!important;
+}
+.font4 {
+  font-size: 28rpx!important;
+}
+.font5 {
+  font-size: 26rpx!important;
+}
+.font6 {
+  font-size: 24rpx!important;
+}
+.font7 {
+  font-size: 22rpx!important;
+}
+.font8 {
+  font-size: 20rpx!important;
+}
+/*彩色*/
+.colour1 {
+  color: #118adc !important;
+}
+.colour2 {
+  color: #f12c52 !important;
+}
+.colour3 {
+  color: #00b389 !important;
+}
+.colour4 {
+  color: #5c3e9c !important;
+}
+.colour5 {
+  color: #fb336f !important;
+}
+/*背景色*/
+.bgc1 {
+  background-color: #118adc !important;
+}
+.bgc2 {
+  background-color: #f12c52 !important;
+}
+.bgc3 {
+  background-color: #00b389 !important;
+}
+.bgc4 {
+  background-color: #5c3e9c !important;
+}
+.bgc5 {
+  background-color: #fb336f !important;
+}
+.bgc_eee {
+  background-color: #eee!important;
+}
+/*边框色*/
+.boc1 {
+  border-color: #118adc !important;
+}
+.boc2 {
+  border-color: #f12c52 !important;
+}
+.boc3 {
+  border-color: #00b389 !important;
+}
+.boc4 {
+  border-color: #5c3e9c !important;
+}
+.boc5 {
+  border-color: #fb336f !important;
+}
+/*纯色*/
+.color1 {
+  color: #000!important;
+}
+.color2 {
+  color: #333!important;
+}
+.color3 {
+  color: #999!important;
+}
+.color4 {
+  color: #eee!important;
+}
+.color5 {
+  color: #fff!important;
+}
+.purple {
+  background: #723882;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #723882 0%, #684168 33%, #a22a83 82%, #9f2385 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #723882 0%, #684168 33%, #a22a83 82%, #9f2385 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #723882 0%, #684168 33%, #a22a83 82%, #9f2385 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  /* IE6-9 fallback on horizontal gradient */
+}
+.pink {
+  background: linear-gradient(#fd97b6 0%, #fb336f 100%);
+}
+.yellow {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f78a80+0,f9a79e+21,f7d9d7+71,f9a79e+100 */
+  background: #f78a80;
+  /* Old browsers */
+  background: -moz-linear-gradient(45deg, #f78a80 0%, #f9a79e 21%, #f7d9d7 71%, #f9a79e 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, #f78a80 0%, #f9a79e 21%, #f7d9d7 71%, #f9a79e 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, #f78a80 0%, #f9a79e 21%, #f7d9d7 71%, #f9a79e 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.green {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2689a1+0,49a49f+23,4a8981+74,445877+100 */
+  background: #2689a1;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #2689a1 0%, #49a49f 23%, #4a8981 74%, #445877 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #2689a1 0%, #49a49f 23%, #4a8981 74%, #445877 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #2689a1 0%, #49a49f 23%, #4a8981 74%, #445877 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.user {
+  background: #eee;
+  min-height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+}
+.u-area {
+  overflow: hidden;
+  background-size: 100% auto;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: top center;
+  width: 100vw;
+  height: 300rpx;
+}
+.u-area .u-icon {
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 50%;
+  margin: 50rpx auto 30rpx auto;
+  display: block;
+}
+.u-area .u-name {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 40rpx;
+  color: #fff;
+  margin-bottom: 40rpx;
+}
+.u-info {
+  padding: 20rpx 0;
+  box-sizing: border-box;
+  margin: 0;
+  background: #333;
+}
+.ui-item {
+  text-align: center;
+  border-right: 1rpx solid #666;
+  font-size: 32rpx!important;
+}
+.ui-item .ui-title,
+.ui-item .ui-num {
+  color: #fff;
+}
+.ui-item:last-child {
+  border-right: 0;
+}
+.ui-item .ui-num {
+  margin: 10rpx 0px 0rpx 0;
+  color: #ddd;
+  font-size: 28rpx!important;
+}
+.u-btn {
+  background: #fff;
+  margin: 30rpx 0px;
+}
+.u-item {
+  font-size: 28rpx!important;
+  padding: 30rpx;
+  border-bottom: 1rpx solid #ccc;
+  color: #333;
+}
+.u-item:last-child {
+  border-bottom: 0;
+}
+.u-item:nth-child(1):before {
+  color: #118adc !important;
+}
+.u-item:nth-child(2):before {
+  color: #f12c52 !important;
+}
+.u-item:nth-child(3):before {
+  color: #00b389 !important;
+}
+.u-item:nth-child(4):before {
+  color: #5c3e9c !important;
+}
+.u-item:nth-child(5):before {
+  color: #fb336f !important;
+}
+.u-item .iconfont {
+  float: right;
+}
+.u-item.click {
+  background: #fff;
+  color: #000;
+}
+.new-message {
+  display: inline-block;
+  font-size: 24rpx!important;
+  width: 30rpx;
+  height: 30rpx;
+  background-color: #f12c52 !important;
+  border-radius: 50%;
+  color: #fff;
+  line-height: 30rpx;
+  text-align: center;
+  margin-left: 10rpx;
+}

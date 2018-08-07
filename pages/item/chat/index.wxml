@@ -1,0 +1,19 @@
+<import src="/template/module/list.wxml"/>
+<import src="/template/module/detail.wxml"/>
+<view class="user-email user-chat">
+	<view class="ue-main">
+		<view class="ue-navlist flex">
+			<view class="ue-type flex1 iconfont icon_bbs font4">{{news.chatDetail.chatTargetName}}</view>
+			
+		</view>
+		<view class="mengban h80"></view>
+		<scroll-view scroll-into-view="{{news.chatDetail.scrollId}}" scroll-y="true" class="ue-layout ue-ul ue-private">
+			<template is="itemChatDetail"  data="{{...news.chatDetail}}" />
+		</scroll-view>
+		<button type="primary" bindtap="chatToUser" data-receivename="{{news.chatDetail.chatTargetName}}" data-id="{{news.chatDetail.chatTargetId}}" data-index="{{news.chatDetail.chatTargetIndex}}" class="ue-chat-btn pofb font4 iconfont icon_send">发私信</button>
+	</view>
+</view>
+<template is="tempInput" data="{{...module.tempInput}}"></template>
+<!-- wetoast -->
+<import src="/template/as/tools.wxml"/>
+<template is="wetoast" data="{{...__wetoast__}}"/>

@@ -1,0 +1,43 @@
+/*
+** 临时输入页面css
+*/
+.tempInput {
+  left: 0;
+  bottom: 0;
+  z-index: 9999;
+  height: 60rpx;
+  box-sizing: border-box;
+  padding: 10rpx;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+.tempInput .tempInputTitle {
+  color: #fff;
+  margin: 30rpx 0;
+}
+.tempInput::after {
+  filter: blur(20px);
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: -1;
+  margin: -100rpx;
+}
+.tempInput textarea {
+  display: block;
+  border: 1rpx solid green;
+  box-sizing: border-box;
+  width: 100%;
+  color: #fff;
+  border-radius: 4rpx;
+  padding: 10rpx;
+  line-height: 1.4em;
+}
+.tempInput button {
+  margin-top: 20rpx;
+}

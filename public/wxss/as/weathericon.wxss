@@ -1,0 +1,281 @@
+h1 {
+  margin-bottom: 0.6875em;
+  color: #fff;
+  font-weight: 100;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+p,
+a {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: small;
+}
+.wi {
+  font-size: 20rpx;
+}
+p {
+  margin: 0.6875r 0;
+}
+.weathericon {
+  border-radius: 10rpx;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  width: 6em;
+  height: 5em;
+  font-size: 0.5em;
+}
+.weathericon view::before,
+.weathericon view::after,
+.weathericon view {
+  box-sizing: border-box;
+}
+.cloud {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 1.84375em;
+  height: 1.84375em;
+  margin: -0.921875em;
+  background: #aaa;
+  border-radius: 50%;
+  box-shadow: -1.09375em 0.34375em 0 -0.34375em #aaa, 1.03125em 0.46875em 0 -0.46875em #aaa, 0 0 0 0.1875em #fff, -1.09375em 0.34375em 0 -0.15625em #fff, 1.03125em 0.46875em 0 -0.28125em #fff;
+}
+.cloud::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -0.25em;
+  display: block;
+  width: 2.28125em;
+  height: 0.5em;
+  background: #aaa;
+  box-shadow: 0 0.21875em 0 -0.03125em #fff;
+}
+.cloud:nth-child(2) {
+  z-index: 0;
+  background: #fff;
+  box-shadow: -1.09375em 0.34375em 0 -0.34375em #fff, 1.03125em 0.46875em 0 -0.46875em #fff, 0 0 0 0.1875em #fff, -1.09375em 0.34375em 0 -0.15625em #fff, 1.03125em 0.46875em 0 -0.28125em #fff;
+  transform: scale(0.5) translate(3em, -1.5em);
+  animation: cloud 4s linear infinite;
+}
+.cloud:nth-child(2)::after {
+  background: #fff;
+}
+.sun {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1.25em;
+  height: 1.25em;
+  margin: -0.625em;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.1875em #fff;
+  animation: spin 12s infinite linear;
+}
+.rays {
+  position: absolute;
+  top: -1em;
+  left: 50%;
+  display: block;
+  width: 0.1875em;
+  height: 0.5625em;
+  margin-left: -0.09375em;
+  background: #fff;
+  border-radius: 0.125em;
+  box-shadow: 0 2.6875em #fff;
+}
+.rays::before,
+.rays::after {
+  content: '';
+  position: absolute;
+  top: 0em;
+  left: 0em;
+  display: block;
+  width: 0.1875em;
+  height: 0.5625em;
+  transform: rotate(60deg);
+  transform-origin: 50% 1.625em;
+  background: #fff;
+  border-radius: 0.125em;
+  box-shadow: 0 2.6875em #fff;
+}
+.rays::before {
+  transform: rotate(120deg);
+}
+.cloud + .sun {
+  margin: -1em 0.5em;
+}
+.rain,
+.lightning,
+.snow {
+  position: absolute;
+  z-index: 2;
+  top: 40%;
+  left: 50%;
+  width: 1.875em;
+  height: 1.875em;
+  margin: 0.1875em 0 0 -1em;
+  background: none;
+}
+.rain::after {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  width: 0.5625em;
+  height: 0.5625em;
+  margin: -0.5em 0 0 -0.125em;
+  background: #0cf;
+  border-radius: 100% 0 60% 50%, 60% 0 100% 50%;
+  border-top-left-radius: 100% 60%;
+  border-top-right-radius: 0% 0%;
+  border-bottom-right-radius: 60% 100%;
+  border-bottom-left-radius: 50% 50%;
+  box-shadow: 0.3125em 0.4375em 0 -0.0625em rgba(255, 255, 255, 0.2), -0.4375em 0.5625em 0 -0.0625em rgba(255, 255, 255, 0.2), -0.6875em -0.0625em 0 rgba(255, 255, 255, 0.2);
+  transform: rotate(-28deg);
+  animation: rain 3s linear infinite;
+}
+.bolt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -0.125em 0 0 -0.0625em;
+  color: #fff;
+  opacity: 1;
+  animation: lightning 2s linear infinite;
+}
+.bolt:nth-child(2) {
+  width: 0.25em;
+  height: 0.125em;
+  margin: -0.875em 0 0 -0.9375em;
+  transform: translate(1.25em, 1.125em);
+  opacity: 0.6;
+  animation: lightning 1.5s linear infinite;
+}
+.bolt::before,
+.bolt::after {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  margin: -0.8125em 0 0 -0.50625em;
+  border-top: 0.625em solid transparent;
+  border-right: 0.375em solid;
+  border-bottom: 0.375em solid;
+  border-left: 0.25em solid transparent;
+  transform: skewX(-10deg);
+}
+.bolt::after {
+  margin: -0.125em 0 0 -0.125em;
+  border-top: 0.375em solid;
+  border-right: 0.25em solid transparent;
+  border-bottom: 0.625em solid transparent;
+  border-left: 0.375em solid;
+  transform: skewX(-10deg);
+}
+.bolt:nth-child(2)::before {
+  margin: -0.375em 0 0 -0.25em;
+  border-top: 0.3125em solid transparent;
+  border-right: 0.1875em solid;
+  border-bottom: 0.1875em solid;
+  border-left: 0.125em solid transparent;
+}
+.bolt:nth-child(2)::after {
+  margin: -0.0625em 0 0 -0.0625em;
+  border-top: 0.1875em solid;
+  border-right: 0.125em solid transparent;
+  border-bottom: 0.3125em solid transparent;
+  border-left: 0.1875em solid;
+}
+.flake::before,
+.flake::after {
+  content: '\2744';
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  margin: -0.5125em 0 0 -0.50625em;
+  color: #fff;
+  list-height: 0.5em;
+  opacity: 0.6;
+  animation: spin 8s linear infinite reverse;
+}
+.flake::after {
+  margin: 0.0625em 0 0 -0.5em;
+  font-size: 1em;
+  opacity: 1;
+  animation: spin 14s linear infinite;
+}
+.flake:nth-child(2)::before {
+  margin: -0.25em 0 0 0.125em;
+  font-size: 0.75em;
+  opacity: 0.6;
+  animation: spin 10s linear infinite;
+}
+.flake:nth-child(2)::after {
+  margin: 0.1875em 0 0 0.0625em;
+  font-size: 1.5em;
+  opacity: 1;
+  animation: spin 16s linear infinite reverse;
+}
+/* Animations */
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes cloud {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5) translate(-200%, -1.5em);
+  }
+}
+@keyframes rain {
+  0% {
+    background: #0cf;
+    box-shadow: 0.3125em 0.4375em 0 -0.0625em rgba(255, 255, 255, 0.2), -0.4375em 0.5625em 0 -0.0625em rgba(255, 255, 255, 0.2), -0.6875em -0.0625em 0 #0cf;
+  }
+  25% {
+    box-shadow: 0.3125em 0.4375em 0 -0.0625em rgba(255, 255, 255, 0.2), -0.4375em 0.5625em 0 -0.0625em #0cf, -0.6875em -0.0625em 0 rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0.3125em 0.4375em 0 -0.0625em #0cf, -0.4375em 0.5625em 0 -0.0625em rgba(255, 255, 255, 0.2), -0.6875em -0.0625em 0 rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    box-shadow: 0.3125em 0.4375em 0 -0.0625em rgba(255, 255, 255, 0.2), -0.4375em 0.5625em 0 -0.0625em rgba(255, 255, 255, 0.2), -0.6875em -0.0625em 0 #0cf;
+  }
+}
+@keyframes lightning {
+  45% {
+    color: #fff;
+    background: #fff;
+    opacity: 0.2;
+  }
+  50% {
+    color: #0cf;
+    background: #0cf;
+    opacity: 1;
+  }
+  55% {
+    color: #fff;
+    background: #fff;
+    opacity: 0.2;
+  }
+}

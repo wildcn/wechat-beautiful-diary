@@ -1,0 +1,19 @@
+<view class="editor-feedback">
+  <view class="ef-input font2">
+  <view class="section__title">请选择问题类型</view>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{feedback.qType}}">
+    <view class="picker">
+      当前选择：{{feedback.qType[feedback.qIndex]}} 
+      <view class="iconfont icon_bottom"></view>
+    </view>
+  </picker>
+   <textarea class="font4 ef-text"  placeholder-style="color:#000;" placeholder="{{feedback.tips}}" maxlength="-1" bindinput="contentChange" value="{{editor.diary.content}}"/>
+  </view>
+  <view class="ef-tips">
+    <button type="primary" size="default" class="save font2" bindtap="savefeedback">发送</button>
+  </view>
+</view>
+
+<!-- wetoast -->
+<import src="/template/as/tools.wxml"/>
+<template is="wetoast" data="{{...__wetoast__}}"/>

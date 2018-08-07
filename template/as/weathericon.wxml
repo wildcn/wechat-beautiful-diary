@@ -1,0 +1,55 @@
+<!-- wetoast.wxml -->
+
+<!-- 阵雨 -->
+<template name="sun-shower">
+	<view class="weathericon sun-shower">
+  <view class="cloud"></view>
+  <view class="sun">
+    <view class="rays"></view>
+  </view>
+  <view class="rain"></view>
+</view>
+</template>
+
+<!-- 雷阵雨 -->
+<template name="thunder-storm">
+<view class="weathericon thunder-storm">
+  <view class="cloud"></view>
+  <view class="lightning">
+    <view class="bolt"></view>
+    <view class="bolt"></view>
+  </view>
+</view>
+</template>
+<!-- 多云 -->
+<template name="cloudy">
+	<view class="weathericon cloudy">
+  <view class="cloud"></view>
+  <view class="cloud"></view>
+</view>
+</template>
+<!-- 雪 -->
+<template name="flurries">
+<view class="weathericon flurries">
+  <view class="cloud"></view>
+  <view class="snow">
+    <view class="flake"></view>
+    <view class="flake"></view>
+  </view>
+</view>
+</template>
+<!-- 晴 -->
+<template name="sunny">
+<view class="weathericon sunny">
+  <view class="sun">
+    <view class="rays"></view>
+  </view>
+</view>
+</template>
+<!-- 雨 -->
+<template name="rainy">
+<view class="weathericon rainy">
+  <view class="cloud"></view>
+  <view class="rain"></view>
+</view>
+</template>

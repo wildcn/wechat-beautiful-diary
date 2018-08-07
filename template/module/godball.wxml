@@ -1,0 +1,17 @@
+<!-- 万能球 -->
+<template name="godBall">
+	<view  class="godball flex {{godBall.active}}" bindtouchstart="gbTouchStart" bindtouchmove="gbTouchMove" bindtouchend="gbTouchEnd" data-type="{{godBall.type}}"  catchtap="gbIconTap" style="top:{{godBall.position.top}}rpx;right:{{godBall.position.right}}rpx">
+		<view class="gb-message flex1">
+		<!-- 显示消息 -->
+			<view class="gb-content font5" data-type="{{godBall.type}}" bindtap="gbTitleTap" data-id="{{godBall.info.id}}" data-date="{{godBall.info.date}}">
+				<image wx:if="{{godBall.info.avatarUrl}}" src="{{godBall.info.avatarUrl}}" mode="widthFix"></image>
+				<view class="gb-text dib">{{godBall.info.content}}</view>
+			</view>
+			<view class="gb-circle"></view>
+		<!-- 显示用户 -->
+		</view>
+		<view class="gb-icon">
+			<view class="iconfont icon_{{godBall.type}}"></view>
+		</view>
+	</view>
+</template>

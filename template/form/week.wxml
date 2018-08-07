@@ -1,0 +1,11 @@
+<!--定义每周心情的box-->
+<template name="mood-week">
+    <view class="vbox-week boc3" hidden="{{vboxHidden}}" data-class="{{moodWeekData}}">
+        <view class="vbox-head font3">
+            <text class="vbox-title iconfont icon_calendar colour3">本周心情</text>
+        </view>
+        <view class="vbox-content" wx:for="{{moodWeekData}}" wx:key="moodWeek">
+            <block class="mood-item-{{item}}">{{item}}</block>
+        </view>
+    </view>
+</template>

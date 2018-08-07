@@ -1,0 +1,202 @@
+.rotate360 {
+  animation: rotate360 3s infinite linear;
+}
+.an-left-show {
+  animation: left-move-200 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+.an-left-hide {
+  animation: right-move-200 0.3s ease-in-out;
+}
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes left-move-200 {
+  0% {
+    transform: translateX(0rpx);
+  }
+  100% {
+    transform: translateX(-310rpx);
+  }
+}
+@keyframes right-move-200 {
+  0% {
+    transform: translateX(-310rpx);
+  }
+  100% {
+    transform: translateX(0rpx);
+  }
+}
+@keyframes flip {
+  0% {
+    transform: rotateX(0deg);
+    color: inherit;
+  }
+  10% {
+    transform: rotateX(180deg);
+    color: #f00;
+  }
+  20% {
+    transform: rotateX(0deg);
+    color: inherit;
+  }
+  100% {
+    transform: rotateX(0deg);
+    color: inherit;
+  }
+}
+.godball {
+  position: fixed;
+  z-index: 9999;
+  width: 100vw;
+  transition: right 0.3s;
+  height: 100rpx;
+  overflow: hidden;
+}
+.godball .gb-icon {
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  right: 0;
+  z-index: 1;
+  width: 80rpx;
+  margin: 10rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #fff;
+  outline: none;
+}
+.godball .gb-icon:after {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  content: '';
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  outline: none;
+}
+.godball .gb-icon:before {
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  display: block;
+  -webkit-font-smoothing: antialiased;
+}
+.godball .gb-icon {
+  background: rgba(255, 255, 255, 0.6);
+  transition: background 0.6s, color 0.6s;
+  position: relative;
+  color: rgba(0, 0, 0, 0.6);
+}
+.godball .gb-icon:after {
+  top: -6rpx;
+  left: -6rpx;
+  padding: 6rpx;
+  box-shadow: 0 0 0 4rpx rgba(255, 255, 255, 0.6);
+  transition: transform 0.2s, opacity 0.2s;
+  transform: scale(0.8);
+  opacity: 0;
+}
+.godball .gb-icon .iconfont {
+  color: rgba(0, 0, 0, 0.6);
+  animation: flip 3s infinite ease-in-out;
+}
+.godball .gb-message {
+  position: relative;
+}
+.godball .gb-message .gb-content {
+  opacity: 0;
+  vertical-align: top;
+  background: rgba(0, 0, 0, 0.8);
+  width: 0rpx;
+  position: absolute;
+  height: 80rpx;
+  top: 10rpx;
+  border: 1rpx solid rgba(255, 255, 255, 0.6);
+  right: 40rpx;
+  border-radius: 40rpx;
+  transition: width 0.2s, opacity 0.2s;
+  text-align: center;
+  line-height: 80rpx;
+  color: #fff;
+}
+.godball .gb-message .gb-content image {
+  vertical-align: top;
+  display: inline-block;
+  width: 60rpx;
+  margin-top: 10rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  margin-right: 10rpx;
+}
+.godball .gb-message .gb-content view {
+  vertical-align: top;
+}
+.godball .gb-message .gb-content:after {
+  display: none;
+  content: '';
+  position: absolute;
+  right: -80rpx;
+  top: 0;
+  width: 0px;
+  height: 0;
+  border-top: 40rpx solid transparent;
+  border-right: 40rpx solid transparent;
+  border-bottom: 40rpx solid transparent;
+  border-left: 40rpx solid rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.godball .gb-message .gb-circle {
+  height: 70rpx;
+  width: 70rpx;
+  margin: 15rpx;
+  background: radial-gradient(140rpx at right top, transparent 50%, rgba(255, 255, 255, 0.6) 50%);
+  transform: rotate(45deg);
+  position: absolute;
+  right: -100rpx;
+  top: 0;
+  opacity: 0;
+  transition: opacity 0.5s, right 0.5s;
+  border-radius: 15rpx;
+}
+.godball.gb-active {
+  right: -20rpx !important;
+}
+.godball.gb-active .gb-message .gb-content {
+  opacity: 1;
+  width: 600rpx;
+  transition-delay: 0.3s;
+}
+.godball.gb-active .gb-message .gb-content:after {
+  opacity: 1;
+}
+.godball.gb-active .gb-message .gb-circle {
+  opacity: 1;
+  right: -56rpx;
+  transition-delay: 0.1s;
+  background: radial-gradient(140rpx at right top, transparent 50%, rgba(0, 0, 0, 0.6) 50%);
+}
+.godball.gb-active .gb-icon {
+  background: rgba(0, 0, 0, 0.4);
+  color: rgba(255, 255, 255, 0.8);
+}
+.godball.gb-active .gb-icon:after {
+  box-shadow: 0 0 0 4rpx rgba(0, 0, 0, 0.4);
+  transform: scale(1);
+  opacity: 1;
+}
+.godball.gb-active .gb-icon .iconfont {
+  color: #fff;
+  animation: none;
+}

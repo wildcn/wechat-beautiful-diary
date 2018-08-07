@@ -1,0 +1,47 @@
+@import 'fontsize';
+.column {
+    overflow: hidden;
+    // padding: 0 30rpx;
+    box-sizing: border-box;
+}
+
+.common-hot {
+    .ch-area {
+        border-radius: 0;
+        &:first-child {
+            border-radius: 10rpx;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        &:last-child {
+            border-radius: 10rpx;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+    }
+}
+.loading-txt{
+    display: block;
+    text-align: center;
+    .font4;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 6rpx;
+    box-sizing: border-box;
+    
+}
+// 心情栏目
+.column-mood {
+    // .yellow;
+    background: #fff;
+    .ch-title {
+        margin: 30rpx;
+    }
+}
+
+.column-discover {
+    padding: 30rpx 30rpx 120rpx 30rpx;
+    box-sizing: border-box;
+    .ch-area{
+        margin-bottom: 30rpx;
+    }
+}

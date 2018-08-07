@@ -1,0 +1,36 @@
+@import 'layout';
+.vbox-head{
+	height: 50rpx;
+	line-height: 50rpx;
+}
+
+.column-history{
+    overflow: hidden;
+}
+.today-history {
+    overflow: hidden;
+    background: #fff;
+    .ed-curtime {
+        picker {
+            margin-top: 3rpx;
+        }
+        .picker{
+        	line-height: 50rpx;
+        	display: inline-block;
+        }
+        .ed-bottom{
+        	line-height: 50rpx;
+        	margin-left: 10rpx;
+        	display: inline-block;
+        }
+    }
+}
+.today-content{
+	.th-title{
+		padding: 10rpx;
+		margin: 0;
+		&:nth-child(odd){
+			background: #f8f8f8;
+		}
+	}
+}

@@ -1,0 +1,3 @@
+/* pages/calendar/index.wxss */
+@import "./../../../public/wxss/hot.wxss";
+@import "./../../../public/wxss/news.wxss";

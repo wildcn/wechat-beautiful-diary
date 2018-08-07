@@ -1,0 +1,21 @@
+<import src="/template/module/bar.wxml"/>
+<import src="/template/module/list.wxml"/>
+<import src="/template/as/tools.wxml"/>
+<view class="column column-diary">
+	<!-- wetoast -->
+	
+	<template is="wetoast" data="{{...__wetoast__}}"/>
+	<!-- 背景 -->
+		<view class="column home">
+		<!-- 更新内容区域  只显示当天数据 -->
+	<template is="diaryList" data="{{...column}}"/>
+	<template is="entrance" data="{{...render}}"/>
+		<!-- home end -->
+		</view>
+	<!-- 底部功能栏 -->
+	
+</view>
+
+<!-- wetoast -->
+<import src="/template/as/tools.wxml"/>
+<template is="wetoast" data="{{...__wetoast__}}"/>

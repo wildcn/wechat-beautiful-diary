@@ -1,0 +1,372 @@
+.font1 {
+  font-size: 40rpx!important;
+}
+.font2 {
+  font-size: 36rpx!important;
+}
+.font3 {
+  font-size: 32rpx!important;
+}
+.font4 {
+  font-size: 28rpx!important;
+}
+.font5 {
+  font-size: 26rpx!important;
+}
+.font6 {
+  font-size: 24rpx!important;
+}
+.font7 {
+  font-size: 22rpx!important;
+}
+.font8 {
+  font-size: 20rpx!important;
+}
+/*彩色*/
+.colour1 {
+  color: #118adc !important;
+}
+.colour2 {
+  color: #f12c52 !important;
+}
+.colour3 {
+  color: #00b389 !important;
+}
+.colour4 {
+  color: #5c3e9c !important;
+}
+.colour5 {
+  color: #fb336f !important;
+}
+/*背景色*/
+.bgc1 {
+  background-color: #118adc !important;
+}
+.bgc2 {
+  background-color: #f12c52 !important;
+}
+.bgc3 {
+  background-color: #00b389 !important;
+}
+.bgc4 {
+  background-color: #5c3e9c !important;
+}
+.bgc5 {
+  background-color: #fb336f !important;
+}
+.bgc_eee {
+  background-color: #eee!important;
+}
+/*边框色*/
+.boc1 {
+  border-color: #118adc !important;
+}
+.boc2 {
+  border-color: #f12c52 !important;
+}
+.boc3 {
+  border-color: #00b389 !important;
+}
+.boc4 {
+  border-color: #5c3e9c !important;
+}
+.boc5 {
+  border-color: #fb336f !important;
+}
+/*纯色*/
+.color1 {
+  color: #000!important;
+}
+.color2 {
+  color: #333!important;
+}
+.color3 {
+  color: #999!important;
+}
+.color4 {
+  color: #eee!important;
+}
+.color5 {
+  color: #fff!important;
+}
+.purple {
+  background: #723882;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #723882 0%, #684168 33%, #a22a83 82%, #9f2385 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #723882 0%, #684168 33%, #a22a83 82%, #9f2385 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #723882 0%, #684168 33%, #a22a83 82%, #9f2385 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  /* IE6-9 fallback on horizontal gradient */
+}
+.pink {
+  background: linear-gradient(#fd97b6 0%, #fb336f 100%);
+}
+.yellow {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f78a80+0,f9a79e+21,f7d9d7+71,f9a79e+100 */
+  background: #f78a80;
+  /* Old browsers */
+  background: -moz-linear-gradient(45deg, #f78a80 0%, #f9a79e 21%, #f7d9d7 71%, #f9a79e 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, #f78a80 0%, #f9a79e 21%, #f7d9d7 71%, #f9a79e 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, #f78a80 0%, #f9a79e 21%, #f7d9d7 71%, #f9a79e 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.green {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2689a1+0,49a49f+23,4a8981+74,445877+100 */
+  background: #2689a1;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #2689a1 0%, #49a49f 23%, #4a8981 74%, #445877 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #2689a1 0%, #49a49f 23%, #4a8981 74%, #445877 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #2689a1 0%, #49a49f 23%, #4a8981 74%, #445877 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+page {
+  background: #fbfbfb;
+}
+.user-email {
+  position: relative;
+  z-index: 1;
+}
+.user-email .ue-head {
+  background: rgba(255, 255, 255, 0.2);
+  height: 60rpx;
+  padding: 30rpx;
+  margin-bottom: 30rpx;
+}
+.user-email .ue-head image {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  display: inline-block;
+}
+.user-email .ue-head .ue-nickname {
+  line-height: 60rpx;
+  margin-right: 20rpx;
+  font-size: 28rpx!important;
+}
+.user-email .ue-head .ue-headtitle {
+  display: inline-block;
+  line-height: 60rpx;
+  font-size: 36rpx!important;
+}
+.ue-main .ue-ul {
+  margin-bottom: 30rpx;
+  box-sizing: border-box;
+  font-size: 28rpx!important;
+}
+.ue-main .ue-navlist {
+  overflow: hidden;
+  height: 80rpx;
+  line-height: 80rpx;
+  position: fixed;
+  top: 0;
+  background: #fbfbfb;
+  left: 0;
+  width: 100vw;
+  z-index: 13;
+}
+.ue-main .ue-navlist .ue-type {
+  text-align: center;
+  color: #555;
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid #eee;
+}
+.ue-main .ue-navlist .ue-type.active {
+  background-color: #118adc !important;
+  color: #fff;
+}
+.ue-main .ue-navlist .ue-type .fr {
+  float: right;
+}
+.ue-main .mengban {
+  height: 80rpx;
+  overflow: hidden;
+}
+.ue-main .ue-li {
+  border-bottom: 1rpx solid #eee;
+  padding: 0 20rpx 20rpx 20rpx;
+  padding: 20rpx 30rpx;
+}
+.ue-main .ue-li:last-child {
+  margin-bottom: 0;
+}
+.ue-main .ue-li.active {
+  background: #fff;
+  padding: 30rpx;
+}
+.ue-main .ue-li.active .ue-title {
+  color: #118adc !important;
+}
+.ue-main .ue-li.active .ue-content {
+  padding: 10rpx;
+  line-height: 1.6em;
+}
+.ue-main .ue-title {
+  color: #31a2ef;
+  display: block;
+  margin-bottom: 10rpx;
+  padding-right: 30rpx;
+  position: relative;
+  line-height: 1.2em;
+}
+.ue-main .ue-time {
+  color: #666;
+  font-size: 24rpx!important;
+}
+.ue-main .ue-fr {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.ue-main .ue-p {
+  display: block;
+  margin-bottom: 20rpx;
+  line-height: 1.4em;
+  word-wrap: break-word;
+}
+.ue-main .new .ue-flag,
+.ue-main .old .ue-flag {
+  font-size: 24rpx!important;
+  padding: 0rpx 7rpx;
+  background: #118adc;
+  color: #fff;
+  margin-right: 10rpx;
+}
+.ue-main .old .ue-title {
+  color: #555;
+}
+.ue-main .old .ue-flag {
+  background: #ddd;
+}
+.ue-private .ue-li {
+  margin-bottom: 0;
+  padding: 14rpx 0;
+  position: relative;
+  z-index: 2;
+  margin: 0 20rpx;
+}
+.ue-private .ue-li:last-child .ue-p-time {
+  border: 0 !important;
+}
+.ue-private .ue-p-name {
+  color: #606060;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.ue-private .ue-p-time {
+  color: #b8b8b8;
+  height: 40rpx;
+  line-height: 40rpx;
+  margin: 0 20rpx;
+  border-bottom: 1rpx solid #eee;
+}
+.ue-private .ue-p-shortContent {
+  height: 30rpx;
+  line-height: 30rpx;
+  color: #b7b7b7;
+}
+.ue-private .ue-content {
+  margin-top: 0;
+  position: relative;
+}
+.ue-private .ue-content .ue-p {
+  margin-bottom: 10rpx;
+}
+.ue-private .ue-list {
+  box-sizing: border-box;
+  height: 80rpx;
+}
+.ue-private .ue-list .ue-p-icon {
+  margin-right: 10rpx;
+  position: relative;
+}
+.ue-private .ue-list .ue-p-icon .ue-p-num {
+  position: absolute;
+  width: 30rpx;
+  height: 0rpx;
+  text-align: center;
+  line-height: 0rpx;
+  padding: 15rpx 0px;
+  right: 0;
+  top: 0;
+  color: #fff;
+  border-radius: 50%;
+}
+.ue-private .ue-list image {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.ue-comments .ue-content {
+  margin-top: 10rpx;
+}
+.user-chat {
+  background: #ebebeb;
+  min-height: 100vh;
+}
+.user-chat .ue-chat-btn {
+  display: block;
+  margin: 30rpx;
+  box-sizing: border-box;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400rpx;
+}
+.user-chat .ue-layout {
+  height: 1000rpx;
+}
+.user-chat .ue-list {
+  display: block;
+  vertical-align: top;
+  position: relative;
+  height: auto;
+}
+.user-chat .ue-navlist {
+  background: #2b3721;
+}
+.user-chat .ue-navlist .ue-type {
+  color: #fff;
+}
+.user-chat .ue-p-icon image {
+  width: 60rpx;
+  height: 60rpx;
+}
+.user-chat .ue-p-content {
+  margin: 0 5rpx;
+  padding: 13rpx 10rpx;
+  background: #fff;
+  border-radius: 10rpx;
+}
+.user-chat .ue-p-content .ue-p {
+  color: #111c24;
+  margin-bottom: 0 !important;
+}
+.user-chat .ue-li {
+  border: 0;
+}
+.user-chat .ue-li image {
+  border-radius: 0;
+}
+.user-chat .ue-li.send {
+  text-align: right;
+}
+.user-chat .ue-li.send .ue-p-icon {
+  margin-right: 0;
+  margin-left: 10rpx;
+}
+.user-chat .ue-li.receive .ue-p-content {
+  background: #a2e759;
+}
+.user-chat .ue-li.receive .ue-p-content .ue-p {
+  color: #111c24;
+}
+.user-chat .ue-li .ue-p-time {
+  color: #999;
+  margin: 10rpx 0 0 0;
+  border: 0;
+}

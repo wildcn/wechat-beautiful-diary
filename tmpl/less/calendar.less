@@ -1,0 +1,128 @@
+@import 'init';
+@import 'fontsize';
+.vbox-calendar {
+    background: #fff;
+    clear: both;
+    padding: 15rpx;
+    content: '';
+}
+
+.vbox-content .vbox-tr {
+    .everyday {
+        height: 100/9vw;
+        margin: 10rpx;
+        // line-height: 100/7.5/2vw;
+        color: #ddd;
+        &.cur_month {
+            color: #111;
+        }
+        &.cur_day {
+            color: #fff;
+            // background: @pink;
+            color: @pink;
+        }
+        position: relative;
+        .ed-num {
+            line-height: 0;
+            height: 0;
+            display: block;
+            padding: 50% 0;
+        }
+        .icon-area {
+            // 图标区域
+            position: absolute;
+            width: 100%;
+
+            height: 20rpx;
+            right: 0;
+            bottom: 0;
+            view {
+                display: inline-block;
+                font-size: 20rpx;
+                color: @pink;
+                text-align: center;
+            }
+            .icon_diary{
+                .colour1;
+            }
+            .icon_remember{
+                .colour3;
+            }
+        }
+        &.index-mood {}
+    }
+}
+
+.vbox-title {
+    .vbox-btn {
+        margin-left: 10rpx;
+        &.select {
+            color: #f00;
+        }
+        &.unselect {
+            color: 111;
+        }
+        &.noselect {
+            color: #555;
+        }
+    }
+}
+
+// 历史上的今天
+.today-history {
+    // background: #fffdc0;
+    padding: 10rpx 0;
+    .th-title {}
+    .today-content {}
+    .today-more {}
+}
+
+.today-content {
+    .th-title {
+        border-bottom: 1rpx solid #eee;
+        padding: 10rpx 0px;
+        &.today-more {
+            border: none;
+        }
+    }
+    .today-year {}
+}
+
+.vbox-head .ed-curtime {
+    margin: 0;
+    border: 0;
+}
+
+.today-list {
+    margin: 20rpx;
+    background: rgba(0, 0, 0, 0.02);
+    .tl-title{
+        height: 50rpx;
+        line-height: 50rpx;
+        .iconfont{
+            width: 50rpx;
+            height: 50rpx;
+            text-align: center;
+            color: #fff;
+            border-radius: 10rpx;
+            margin-right: 20rpx;
+
+        }
+        .icon_bottom{
+            color: #111;
+            margin-right: 0;
+        }
+    }
+    .tl-item {
+        box-sizing: border-box;
+        padding: 20rpx;
+        border-bottom: 1rpx solid #eee;
+        &:last-child{
+            border-bottom: 0;
+        }
+    }
+    .tl-content {
+        margin: 30rpx auto 10rpx auto;
+        line-height: 1.6em;
+    }
+}

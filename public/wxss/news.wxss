@@ -1,0 +1,347 @@
+.font1 {
+  font-size: 40rpx!important;
+}
+.font2 {
+  font-size: 36rpx!important;
+}
+.font3 {
+  font-size: 32rpx!important;
+}
+.font4 {
+  font-size: 28rpx!important;
+}
+.font5 {
+  font-size: 26rpx!important;
+}
+.font6 {
+  font-size: 24rpx!important;
+}
+.font7 {
+  font-size: 22rpx!important;
+}
+.font8 {
+  font-size: 20rpx!important;
+}
+/*彩色*/
+.colour1 {
+  color: #118adc !important;
+}
+.colour2 {
+  color: #f12c52 !important;
+}
+.colour3 {
+  color: #00b389 !important;
+}
+.colour4 {
+  color: #5c3e9c !important;
+}
+.colour5 {
+  color: #fb336f !important;
+}
+/*背景色*/
+.bgc1 {
+  background-color: #118adc !important;
+}
+.bgc2 {
+  background-color: #f12c52 !important;
+}
+.bgc3 {
+  background-color: #00b389 !important;
+}
+.bgc4 {
+  background-color: #5c3e9c !important;
+}
+.bgc5 {
+  background-color: #fb336f !important;
+}
+.bgc_eee {
+  background-color: #eee!important;
+}
+/*边框色*/
+.boc1 {
+  border-color: #118adc !important;
+}
+.boc2 {
+  border-color: #f12c52 !important;
+}
+.boc3 {
+  border-color: #00b389 !important;
+}
+.boc4 {
+  border-color: #5c3e9c !important;
+}
+.boc5 {
+  border-color: #fb336f !important;
+}
+/*纯色*/
+.color1 {
+  color: #000!important;
+}
+.color2 {
+  color: #333!important;
+}
+.color3 {
+  color: #999!important;
+}
+.color4 {
+  color: #eee!important;
+}
+.color5 {
+  color: #fff!important;
+}
+.purple {
+  background: #723882;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #723882 0%, #684168 33%, #a22a83 82%, #9f2385 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #723882 0%, #684168 33%, #a22a83 82%, #9f2385 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #723882 0%, #684168 33%, #a22a83 82%, #9f2385 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  /* IE6-9 fallback on horizontal gradient */
+}
+.pink {
+  background: linear-gradient(#fd97b6 0%, #fb336f 100%);
+}
+.yellow {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f78a80+0,f9a79e+21,f7d9d7+71,f9a79e+100 */
+  background: #f78a80;
+  /* Old browsers */
+  background: -moz-linear-gradient(45deg, #f78a80 0%, #f9a79e 21%, #f7d9d7 71%, #f9a79e 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, #f78a80 0%, #f9a79e 21%, #f7d9d7 71%, #f9a79e 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, #f78a80 0%, #f9a79e 21%, #f7d9d7 71%, #f9a79e 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.green {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2689a1+0,49a49f+23,4a8981+74,445877+100 */
+  background: #2689a1;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #2689a1 0%, #49a49f 23%, #4a8981 74%, #445877 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #2689a1 0%, #49a49f 23%, #4a8981 74%, #445877 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #2689a1 0%, #49a49f 23%, #4a8981 74%, #445877 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+@font-face {
+  font-family: 'iconfont';
+  /* project id 220463 */
+  src: url('//at.alicdn.com/t/font_ac0xf52jg0v8to6r.eot');
+  src: url('//at.alicdn.com/t/font_ac0xf52jg0v8to6r.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_ac0xf52jg0v8to6r.woff') format('woff'), url('//at.alicdn.com/t/font_ac0xf52jg0v8to6r.ttf') format('truetype'), url('//at.alicdn.com/t/font_ac0xf52jg0v8to6r.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.iconfont:before {
+  padding-right: 6rpx;
+}
+.icon_wechat:before {
+  content: "\e60c";
+}
+.icon_secret:before {
+  content: "\e602";
+}
+.icon_ask:before {
+  content: "\e61b";
+}
+.icon_answer:before {
+  content: "\e678";
+}
+.icon_write:before {
+  content: "\e690";
+}
+.icon_receive:before {
+  content: "\e763";
+}
+.icon_send:before {
+  content: "\e68c";
+}
+.icon_cry:before {
+  content: "\e610";
+}
+.icon_anniversary:before {
+  content: "\e608";
+}
+.icon_comments:before {
+  content: "\e622";
+}
+.icon_share:before {
+  content: "\e621";
+}
+.icon_loading:before {
+  content: "\e656";
+}
+.icon_brow:before {
+  content: "\e600";
+}
+.icon_agree:before {
+  content: "\e60b";
+}
+.icon_agreeclicked:before {
+  content: "\e60a";
+}
+.icon_male:before {
+  content: "\e65a";
+}
+.icon_female:before {
+  content: "\e65b";
+}
+.icon_nodata:before {
+  content: "\e603";
+}
+.icon_mood:before {
+  content: "\e660";
+}
+.icon_close:before {
+  content: "\e69a";
+}
+.icon_vote:before {
+  content: "\e647";
+}
+.icon_add:before {
+  content: "\e6b9";
+}
+.icon_bbs:before {
+  content: "\e694";
+}
+.icon_email:before {
+  content: "\e64d";
+}
+.icon_public:before {
+  content: "\e62a";
+}
+.icon_private:before {
+  content: "\e675";
+}
+.icon_clock:before {
+  content: "\e6bb";
+}
+.icon_tips:before {
+  content: "\e653";
+}
+.icon_clear:before {
+  content: "\e606";
+}
+.icon_favorite:before {
+  content: "\e6a0";
+}
+.icon_aboutus:before {
+  content: "\e75b";
+}
+.icon_feedback:before {
+  content: "\e61d";
+}
+.icon_calendar:before {
+  content: "\e6bf";
+}
+.icon_meau:before {
+  content: "\e6b4";
+}
+.icon_all:before {
+  content: "\e696";
+}
+.icon_diary:before {
+  content: "\e659";
+}
+.icon_tool:before {
+  content: "\e78f";
+}
+.icon_home:before {
+  content: "\e629";
+}
+.icon_discover:before {
+  content: "\e644";
+}
+.icon_remember:before {
+  content: "\e698";
+}
+.icon_more:before {
+  content: "\e61a";
+}
+.icon_history:before {
+  content: "\e66e";
+}
+.icon_countdown:before {
+  content: "\e60e";
+}
+.icon_top:before {
+  content: "\e6a5";
+}
+.icon_bottom:before {
+  content: "\e6a6";
+}
+.icon_right:before {
+  content: "\e6a7";
+}
+.icon_left:before {
+  content: "\e697";
+}
+.icon_location:before {
+  content: "\e620";
+}
+.icon_weather:before {
+  content: "\e601";
+}
+.icon_smile:before {
+  content: "\e617";
+}
+.icon_angry:before {
+  content: "\e613";
+}
+.icon_sad:before {
+  content: "\e609";
+}
+.icon_worry:before {
+  content: "\e612";
+}
+.icon_fear:before {
+  content: "\e618";
+}
+.icon_miss:before {
+  content: "\e619";
+}
+.icon_calm:before {
+  content: "\e607";
+}
+.item-news {
+  margin: 30rpx;
+  padding-bottom: 120rpx;
+}
+.item-news text {
+  line-height: 1.6em;
+}
+.item-news .news-h1 {
+  font-size: 40rpx!important;
+  line-height: 1.4em;
+  margin-bottom: 30rpx;
+}
+.item-news .news-info {
+  font-size: 28rpx!important;
+}
+.item-news .news-desc {
+  font-size: 28rpx!important;
+  color: #555;
+  padding: 30rpx;
+  border: 1rpx solid #eee;
+  border-radius: 10rpx;
+  margin: 20rpx 0px;
+}
+.item-news .news-content {
+  box-sizing: border-box;
+}
+.item-news .news-content text {
+  font-size: 32rpx!important;
+  color: #333;
+  margin-bottom: 30rpx;
+  display: block;
+}
+.item-news .news-content image {
+  display: block;
+  margin: 20rpx auto;
+}

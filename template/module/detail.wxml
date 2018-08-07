@@ -1,0 +1,40 @@
+<template name="newsDetail">
+	<view class="item-news">
+  <view class="news-h1">{{title}}</view>
+  <view class="news-info" wx:if="{{time}}">
+    <text class="news-auth"></text><text class="news-time">{{time}}</text>
+  </view>
+  <view class="news-desc" wx:if="{{desc}}">
+    <text>{{desc}}</text>
+  </view>
+  <view class="news-content" >
+    <view wx:for="{{content}}" wx:key="newsDetailContent">
+      <text wx:if="{{item.content}}">{{item.content}}</text>
+      <image src="{{item.src}}" wx:if="{{item.src}}" mode="widthFix"/>
+    </view>
+  </view>
+</view>
+</template>
+
+
+<!-- 私信详情页 -->
+<template name="itemChatDetail">
+<view class="{{item.status == 0?'new':'old'}} ue-li {{item.identity == 'receive'?'receive':'send'}}" id="{{item.scrollId}}" wx:for="{{list}}" wx:key="itemChatDetail">
+  <view class="ue-list flex" data-index="{{index}}">
+    <view class="ue-p-icon dib" wx:if="{{item.identity == 'receive'}}">
+      <image src="{{item.sendIcon}}" mode="widthFix" />
+    </view>
+    <view class="flex1" wx:if="{{item.identity == 'send'}}"></view>
+    <view class="ue-p-content dib">
+      <text  wx:for="{{item.formatContent}}" wx:key="pe-content" wx:for-item="peItem" class="ue-p font4">{{peItem.content}}</text>
+    </view>
+    <view class="flex1" wx:if="{{item.identity == 'receive'}}"></view>
+    <view class="ue-p-icon dib"  wx:if="{{item.identity == 'send'}}">
+      <image src="{{item.sendIcon}}" mode="widthFix" />
+    </view>
+  </view>
+  <view class="ue-p-time font6" wx:if="{{item.timeShow}}">
+      {{item.time}}
+    </view>
+</view>
+</template>

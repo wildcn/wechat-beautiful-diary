@@ -1,0 +1,43 @@
+
+<!-- wetoast -->
+
+<!-- 背景 -->
+	<view class="user">
+		<!-- 顶部功能栏 -->
+		<view class="u-area" style="background-image: url({{column.home.headImg}});">
+			<image class="u-icon" src="{{curData.userData.avatarUrl}}" />
+			<view class="u-name">{{curData.userData.nickName}}</view>
+			
+		</view>
+		<view class="u-info flex">
+				<view class="ui-item flex1" bindtap="switchTab" data-href="/pages/column/diary/index">
+					<view class="ui-title">日记</view>
+					<view class="ui-num">{{curData.userAll.diary}}</view>
+				</view>
+				<view class="ui-item flex1" bindtap="switchTab" data-href="/pages/column/mood/index">
+					<view class="ui-title">心情</view>
+					<view class="ui-num">{{curData.userAll.mood}}</view>
+				</view>
+				<view class="ui-item flex1" bindtap="navigateTo" data-href="pages/column/anniversary/index">
+					<view class="ui-title">纪念</view>
+					<view class="ui-num">{{curData.userAll.anniversary}}</view>
+				</view>
+			</view>
+		<view class="u-btn">
+			<view class="u-item iconfont icon_email" bindtap="navigateTo" data-href="pages/user/email/index">美日信箱<view class="new-message" wx:if="{{column.userEmail.newNum}}">{{column.userEmail.newNum}}</view><view class="iconfont icon_right"></view></view>
+			<view class="u-item iconfont icon_aboutus" bindtap="navigateTo" data-href="pages/user/aboutus/index">关于我们<view class="iconfont icon_right"></view></view>
+			<view class="u-item iconfont icon_feedback" bindtap="navigateTo" data-href="pages/editor/feedback/index">意见反馈<view class="iconfont icon_right"></view></view>
+			<!-- <view class="u-item iconfont icon_tips" bindtap="openVersionTips" >版本提示<view class="iconfont icon_right"></view></view> -->
+			<view class="u-item iconfont icon_clear" bindtap="clearStorage">清空缓存<view class="iconfont icon_right"></view></view>
+			</view>
+	<!-- home end -->
+	</view>
+
+
+<import src="/template/module/bar.wxml"/>
+<!-- 底部功能栏 -->
+
+
+<!-- wetoast -->
+<import src="/template/as/tools.wxml"/>
+<template is="wetoast" data="{{...__wetoast__}}"/>

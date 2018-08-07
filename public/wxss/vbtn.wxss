@@ -1,0 +1,28 @@
+.vbtn{
+    padding:0 0 30rpx 0;
+}
+.vbtn-nav{
+    width:20%;
+    position: relative;
+    vertical-align: middle;
+    text-align: center;
+}
+.vbtn-nav:before{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top:-15rpx;
+    
+}
+.vbtn-icon{
+    width: 100rpx;
+    height:100rpx;
+    border-radius: 5px;
+    margin:0 auto;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100rpx;
+    font-size: 70rpx;
+    opacity: 0.6;
+    color: #fff;
+}

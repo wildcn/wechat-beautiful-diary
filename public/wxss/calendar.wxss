@@ -1,0 +1,229 @@
+.font1 {
+  font-size: 40rpx!important;
+}
+.font2 {
+  font-size: 36rpx!important;
+}
+.font3 {
+  font-size: 32rpx!important;
+}
+.font4 {
+  font-size: 28rpx!important;
+}
+.font5 {
+  font-size: 26rpx!important;
+}
+.font6 {
+  font-size: 24rpx!important;
+}
+.font7 {
+  font-size: 22rpx!important;
+}
+.font8 {
+  font-size: 20rpx!important;
+}
+/*彩色*/
+.colour1 {
+  color: #118adc !important;
+}
+.colour2 {
+  color: #f12c52 !important;
+}
+.colour3 {
+  color: #00b389 !important;
+}
+.colour4 {
+  color: #5c3e9c !important;
+}
+.colour5 {
+  color: #fb336f !important;
+}
+/*背景色*/
+.bgc1 {
+  background-color: #118adc !important;
+}
+.bgc2 {
+  background-color: #f12c52 !important;
+}
+.bgc3 {
+  background-color: #00b389 !important;
+}
+.bgc4 {
+  background-color: #5c3e9c !important;
+}
+.bgc5 {
+  background-color: #fb336f !important;
+}
+.bgc_eee {
+  background-color: #eee!important;
+}
+/*边框色*/
+.boc1 {
+  border-color: #118adc !important;
+}
+.boc2 {
+  border-color: #f12c52 !important;
+}
+.boc3 {
+  border-color: #00b389 !important;
+}
+.boc4 {
+  border-color: #5c3e9c !important;
+}
+.boc5 {
+  border-color: #fb336f !important;
+}
+/*纯色*/
+.color1 {
+  color: #000!important;
+}
+.color2 {
+  color: #333!important;
+}
+.color3 {
+  color: #999!important;
+}
+.color4 {
+  color: #eee!important;
+}
+.color5 {
+  color: #fff!important;
+}
+.purple {
+  background: #723882;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #723882 0%, #684168 33%, #a22a83 82%, #9f2385 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #723882 0%, #684168 33%, #a22a83 82%, #9f2385 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #723882 0%, #684168 33%, #a22a83 82%, #9f2385 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  /* IE6-9 fallback on horizontal gradient */
+}
+.pink {
+  background: linear-gradient(#fd97b6 0%, #fb336f 100%);
+}
+.yellow {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f78a80+0,f9a79e+21,f7d9d7+71,f9a79e+100 */
+  background: #f78a80;
+  /* Old browsers */
+  background: -moz-linear-gradient(45deg, #f78a80 0%, #f9a79e 21%, #f7d9d7 71%, #f9a79e 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, #f78a80 0%, #f9a79e 21%, #f7d9d7 71%, #f9a79e 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, #f78a80 0%, #f9a79e 21%, #f7d9d7 71%, #f9a79e 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.green {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2689a1+0,49a49f+23,4a8981+74,445877+100 */
+  background: #2689a1;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #2689a1 0%, #49a49f 23%, #4a8981 74%, #445877 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #2689a1 0%, #49a49f 23%, #4a8981 74%, #445877 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #2689a1 0%, #49a49f 23%, #4a8981 74%, #445877 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.vbox-calendar {
+  background: #fff;
+  clear: both;
+  padding: 15rpx;
+  content: '';
+}
+.vbox-content .vbox-tr .everyday {
+  height: 11.11111111vw;
+  margin: 10rpx;
+  color: #ddd;
+  position: relative;
+}
+.vbox-content .vbox-tr .everyday.cur_month {
+  color: #111;
+}
+.vbox-content .vbox-tr .everyday.cur_day {
+  color: #fff;
+  color: #fb336f;
+}
+.vbox-content .vbox-tr .everyday .ed-num {
+  line-height: 0;
+  height: 0;
+  display: block;
+  padding: 50% 0;
+}
+.vbox-content .vbox-tr .everyday .icon-area {
+  position: absolute;
+  width: 100%;
+  height: 20rpx;
+  right: 0;
+  bottom: 0;
+}
+.vbox-content .vbox-tr .everyday .icon-area view {
+  display: inline-block;
+  font-size: 20rpx;
+  color: #fb336f;
+  text-align: center;
+}
+.vbox-content .vbox-tr .everyday .icon-area .icon_diary {
+  color: #118adc !important;
+}
+.vbox-content .vbox-tr .everyday .icon-area .icon_remember {
+  color: #00b389 !important;
+}
+.vbox-title .vbox-btn {
+  margin-left: 10rpx;
+}
+.vbox-title .vbox-btn.select {
+  color: #f00;
+}
+.vbox-title .vbox-btn.unselect {
+  color: 111;
+}
+.vbox-title .vbox-btn.noselect {
+  color: #555;
+}
+.today-history {
+  padding: 10rpx 0;
+}
+.today-content .th-title {
+  border-bottom: 1rpx solid #eee;
+  padding: 10rpx 0px;
+}
+.today-content .th-title.today-more {
+  border: none;
+}
+.vbox-head .ed-curtime {
+  margin: 0;
+  border: 0;
+}
+.today-list {
+  margin: 20rpx;
+  background: rgba(0, 0, 0, 0.02);
+}
+.today-list .tl-title {
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.today-list .tl-title .iconfont {
+  width: 50rpx;
+  height: 50rpx;
+  text-align: center;
+  color: #fff;
+  border-radius: 10rpx;
+  margin-right: 20rpx;
+}
+.today-list .tl-title .icon_bottom {
+  color: #111;
+  margin-right: 0;
+}
+.today-list .tl-item {
+  box-sizing: border-box;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #eee;
+}
+.today-list .tl-item:last-child {
+  border-bottom: 0;
+}
+.today-list .tl-content {
+  margin: 30rpx auto 10rpx auto;
+  line-height: 1.6em;
+}

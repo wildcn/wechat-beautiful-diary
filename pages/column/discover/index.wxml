@@ -1,0 +1,24 @@
+
+<!-- wetoast -->
+<import src="/template/as/tools.wxml"/>
+
+<import src="/template/module/list.wxml"/>
+
+<template is="wetoast" data="{{...__wetoast__}}"/>
+
+<!-- 背景 -->
+	<view class="column home column-discover">
+		<view class="ch-title">
+			<text class="ch-name">发现世界的美丽</text>
+			<view class="iconfont icon_bottom ch-go"></view>
+		</view>
+	<!-- 更新内容区域  只显示当天数据 -->
+	<view class="cd-area">
+		<template is="news-image-txt" wx:for="{{column.discover.itemNews}}" wx:key="columnDiscover" data="{{...item}}"></template>
+		<view wx:if="{{column.discover.isloading}}" class="loading-txt iconfont icon_{{column.discover.isloading == 1?'loading':'nodata'}}">{{column.discover.isloading == 1?'加载中……':'暂无数据'}}</view>
+	</view>
+	<!-- home end -->
+	</view>
+
+<!-- 底部功能栏 -->
+<import src="/template/module/bar.wxml"/>
